@@ -1,0 +1,8 @@
+Added Component: Designator=sd(Micro-sd-socket)
+Added Pin To Net: NetName=SDDAT2 Pin=sd-1
+Added Pin To Net: NetName=SDDAT3 Pin=sd-2
+Added Pin To Net: NetName=SDCMD Pin=sd-3
+Added Pin To Net: NetName=VCC Pin=sd-4
+Added Pin To Net: NetName=GND Pin=sd-6
+Added Pin To Net: NetName=SDDAT0 Pin=sd-7
+Added Pin To Net: NetName=SDDAT1 Pin=sd-8

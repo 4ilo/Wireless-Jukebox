@@ -1,0 +1,4 @@
+Change Component Designator: OldDesignator=P3 NewDesignator=SWD
+Change Component Designator: OldDesignator=P5 NewDesignator=UART
+Change Component Designator: OldDesignator=R6 NewDesignator=R-Pullup
+Change Component Designator: OldDesignator=Stm32F411 NewDesignator=Stm32F4

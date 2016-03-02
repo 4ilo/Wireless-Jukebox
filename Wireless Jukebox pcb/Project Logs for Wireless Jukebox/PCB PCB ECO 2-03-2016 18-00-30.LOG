@@ -1,0 +1,3 @@
+Change Component Footprint: Designator=X1 Old Footprint=DT-38 New Footprint=HC-49S
+Change Room Name: Old Name=PoE New Name=schema
+Change Room Scope: Old Scope=InComponentClass('PoE') New Scope=InComponentClass('schema')

@@ -1,0 +1,2 @@
+Remove Pin=P4-5 From Net=SDCLK
+Remove Pin=P4-9 From Net=CARDDET
