@@ -1,0 +1,369 @@
+13:42:42 **** Incremental Build of configuration Debug for project testInterupt ****
+make all 
+Building file: ../Src/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F411xE -DUSE_HAL_DRIVER -DHSE_VALUE=96000000 -I"../Inc" -I"../system/Inc" -I"../system/Inc/cmsis" -I"../system/Inc/stm32f4-hal" -std=gnu11 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -c -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Src/main.c:60:50: warning: unused parameter 'huart' [-Wunused-parameter]
+ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+                                                  ^
+../Src/main.c: In function 'main':
+../Src/main.c:90:29: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   HAL_UART_Transmit(&huart6,"testprogramma uart-interupt\r\n",29,10);
+                             ^
+In file included from ../Inc/stm32f4xx_hal_conf.h:373:0,
+                 from ../system/Inc/stm32f4-hal/stm32f4xx_hal.h:48,
+                 from ../Src/main.c:34:
+../system/Inc/stm32f4-hal/stm32f4xx_hal_uart.h:647:19: note: expected '__uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^
+../Src/main.c: In function 'assert_failed':
+../Src/main.c:218:29: warning: unused parameter 'file' [-Wunused-parameter]
+ void assert_failed(uint8_t* file, uint32_t line)
+                             ^
+../Src/main.c:218:44: warning: unused parameter 'line' [-Wunused-parameter]
+ void assert_failed(uint8_t* file, uint32_t line)
+                                            ^
+Finished building: ../Src/main.c
+ 
+Building target: testInterupt.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"testInterupt.map" --specs=nano.specs -o "testInterupt.elf"  ./system/Src/stm32f4-hal/stm32f4xx_hal.o ./system/Src/stm32f4-hal/stm32f4xx_hal_cortex.o ./system/Src/stm32f4-hal/stm32f4xx_hal_flash.o ./system/Src/stm32f4-hal/stm32f4xx_hal_gpio.o ./system/Src/stm32f4-hal/stm32f4xx_hal_iwdg.o ./system/Src/stm32f4-hal/stm32f4xx_hal_pwr.o ./system/Src/stm32f4-hal/stm32f4xx_hal_rcc.o ./system/Src/stm32f4-hal/stm32f4xx_hal_uart.o  ./system/Src/newlib/_cxx.o ./system/Src/newlib/_exit.o ./system/Src/newlib/_sbrk.o ./system/Src/newlib/_startup.o ./system/Src/newlib/_syscalls.o ./system/Src/newlib/assert.o  ./system/Src/diag/Trace.o ./system/Src/diag/trace_impl.o  ./system/Src/cortexm/_initialize_hardware.o ./system/Src/cortexm/_reset_hardware.o ./system/Src/cortexm/exception_handlers.o  ./system/Src/cmsis/system_stm32f4xx.o ./system/Src/cmsis/vectors_stm32f411xe.o  ./Src/main.o ./Src/stm32f4xx_hal_msp.o ./Src/stm32f4xx_it.o   
+Finished building target: testInterupt.elf
+ 
+Invoking: Cross ARM GNU Create Flash Image
+arm-none-eabi-objcopy -O ihex "testInterupt.elf"  "testInterupt.hex"
+Finished building: testInterupt.hex
+ 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "testInterupt.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7516	     60	    336	   7912	   1ee8	testInterupt.elf
+Finished building: testInterupt.siz
+ 
+13:42:43 **** Incremental Build of configuration Debug for project testInterupt ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "testInterupt.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7516	     60	    336	   7912	   1ee8	testInterupt.elf
+Finished building: testInterupt.siz
+ 
+13:42:48 **** Incremental Build of configuration Debug for project testInterupt ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "testInterupt.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7516	     60	    336	   7912	   1ee8	testInterupt.elf
+Finished building: testInterupt.siz
+ 
+13:45:21 **** Incremental Build of configuration Debug for project testInterupt ****
+make all 
+Building file: ../Src/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F411xE -DUSE_HAL_DRIVER -DHSE_VALUE=96000000 -I"../Inc" -I"../system/Inc" -I"../system/Inc/cmsis" -I"../system/Inc/stm32f4-hal" -std=gnu11 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -c -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Src/main.c:63:30: error: 'data' undeclared (first use in this function)
+  HAL_UART_Receive_IT(&huart6,data,1);
+                              ^
+../Src/main.c:63:30: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:60:50: warning: unused parameter 'huart' [-Wunused-parameter]
+ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+                                                  ^
+../Src/main.c: In function 'main':
+../Src/main.c:91:29: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   HAL_UART_Transmit(&huart6,"testprogramma uart-interupt\r\n",29,10);
+                             ^
+In file included from ../Inc/stm32f4xx_hal_conf.h:373:0,
+                 from ../system/Inc/stm32f4-hal/stm32f4xx_hal.h:48,
+                 from ../Src/main.c:34:
+../system/Inc/stm32f4-hal/stm32f4xx_hal_uart.h:647:19: note: expected '__uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^
+../Src/main.c: In function 'assert_failed':
+../Src/main.c:219:29: warning: unused parameter 'file' [-Wunused-parameter]
+ void assert_failed(uint8_t* file, uint32_t line)
+                             ^
+../Src/main.c:219:44: warning: unused parameter 'line' [-Wunused-parameter]
+ void assert_failed(uint8_t* file, uint32_t line)
+                                            ^
+make: *** [Src/main.o] Error 1
+13:45:48 **** Incremental Build of configuration Debug for project testInterupt ****
+make all 
+Building file: ../Src/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F411xE -DUSE_HAL_DRIVER -DHSE_VALUE=96000000 -I"../Inc" -I"../system/Inc" -I"../system/Inc/cmsis" -I"../system/Inc/stm32f4-hal" -std=gnu11 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -c -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Src/main.c:62:50: warning: unused parameter 'huart' [-Wunused-parameter]
+ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+                                                  ^
+../Src/main.c: In function 'main':
+../Src/main.c:93:29: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   HAL_UART_Transmit(&huart6,"testprogramma uart-interupt\r\n",29,10);
+                             ^
+In file included from ../Inc/stm32f4xx_hal_conf.h:373:0,
+                 from ../system/Inc/stm32f4-hal/stm32f4xx_hal.h:48,
+                 from ../Src/main.c:34:
+../system/Inc/stm32f4-hal/stm32f4xx_hal_uart.h:647:19: note: expected '__uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^
+../Src/main.c: In function 'assert_failed':
+../Src/main.c:221:29: warning: unused parameter 'file' [-Wunused-parameter]
+ void assert_failed(uint8_t* file, uint32_t line)
+                             ^
+../Src/main.c:221:44: warning: unused parameter 'line' [-Wunused-parameter]
+ void assert_failed(uint8_t* file, uint32_t line)
+                                            ^
+Finished building: ../Src/main.c
+ 
+Building target: testInterupt.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"testInterupt.map" --specs=nano.specs -o "testInterupt.elf"  ./system/Src/stm32f4-hal/stm32f4xx_hal.o ./system/Src/stm32f4-hal/stm32f4xx_hal_cortex.o ./system/Src/stm32f4-hal/stm32f4xx_hal_flash.o ./system/Src/stm32f4-hal/stm32f4xx_hal_gpio.o ./system/Src/stm32f4-hal/stm32f4xx_hal_iwdg.o ./system/Src/stm32f4-hal/stm32f4xx_hal_pwr.o ./system/Src/stm32f4-hal/stm32f4xx_hal_rcc.o ./system/Src/stm32f4-hal/stm32f4xx_hal_uart.o  ./system/Src/newlib/_cxx.o ./system/Src/newlib/_exit.o ./system/Src/newlib/_sbrk.o ./system/Src/newlib/_startup.o ./system/Src/newlib/_syscalls.o ./system/Src/newlib/assert.o  ./system/Src/diag/Trace.o ./system/Src/diag/trace_impl.o  ./system/Src/cortexm/_initialize_hardware.o ./system/Src/cortexm/_reset_hardware.o ./system/Src/cortexm/exception_handlers.o  ./system/Src/cmsis/system_stm32f4xx.o ./system/Src/cmsis/vectors_stm32f411xe.o  ./Src/main.o ./Src/stm32f4xx_hal_msp.o ./Src/stm32f4xx_it.o   
+Finished building target: testInterupt.elf
+ 
+Invoking: Cross ARM GNU Create Flash Image
+arm-none-eabi-objcopy -O ihex "testInterupt.elf"  "testInterupt.hex"
+Finished building: testInterupt.hex
+ 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "testInterupt.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7536	     60	    340	   7936	   1f00	testInterupt.elf
+Finished building: testInterupt.siz
+ 
+13:49:47 **** Incremental Build of configuration Debug for project testInterupt ****
+make all 
+Building file: ../Src/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F411xE -DUSE_HAL_DRIVER -DHSE_VALUE=96000000 -I"../Inc" -I"../system/Inc" -I"../system/Inc/cmsis" -I"../system/Inc/stm32f4-hal" -std=gnu11 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -c -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Src/main.c:62:50: warning: unused parameter 'huart' [-Wunused-parameter]
+ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+                                                  ^
+../Src/main.c: In function 'main':
+../Src/main.c:93:29: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   HAL_UART_Transmit(&huart6,"testprogramma uart-interupt\r\n",29,10);
+                             ^
+In file included from ../Inc/stm32f4xx_hal_conf.h:373:0,
+                 from ../system/Inc/stm32f4-hal/stm32f4xx_hal.h:48,
+                 from ../Src/main.c:34:
+../system/Inc/stm32f4-hal/stm32f4xx_hal_uart.h:647:19: note: expected '__uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^
+../Src/main.c: In function 'assert_failed':
+../Src/main.c:221:29: warning: unused parameter 'file' [-Wunused-parameter]
+ void assert_failed(uint8_t* file, uint32_t line)
+                             ^
+../Src/main.c:221:44: warning: unused parameter 'line' [-Wunused-parameter]
+ void assert_failed(uint8_t* file, uint32_t line)
+                                            ^
+Finished building: ../Src/main.c
+ 
+Building target: testInterupt.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"testInterupt.map" --specs=nano.specs -o "testInterupt.elf"  ./system/Src/stm32f4-hal/stm32f4xx_hal.o ./system/Src/stm32f4-hal/stm32f4xx_hal_cortex.o ./system/Src/stm32f4-hal/stm32f4xx_hal_flash.o ./system/Src/stm32f4-hal/stm32f4xx_hal_gpio.o ./system/Src/stm32f4-hal/stm32f4xx_hal_iwdg.o ./system/Src/stm32f4-hal/stm32f4xx_hal_pwr.o ./system/Src/stm32f4-hal/stm32f4xx_hal_rcc.o ./system/Src/stm32f4-hal/stm32f4xx_hal_uart.o  ./system/Src/newlib/_cxx.o ./system/Src/newlib/_exit.o ./system/Src/newlib/_sbrk.o ./system/Src/newlib/_startup.o ./system/Src/newlib/_syscalls.o ./system/Src/newlib/assert.o  ./system/Src/diag/Trace.o ./system/Src/diag/trace_impl.o  ./system/Src/cortexm/_initialize_hardware.o ./system/Src/cortexm/_reset_hardware.o ./system/Src/cortexm/exception_handlers.o  ./system/Src/cmsis/system_stm32f4xx.o ./system/Src/cmsis/vectors_stm32f411xe.o  ./Src/main.o ./Src/stm32f4xx_hal_msp.o ./Src/stm32f4xx_it.o   
+Finished building target: testInterupt.elf
+ 
+Invoking: Cross ARM GNU Create Flash Image
+arm-none-eabi-objcopy -O ihex "testInterupt.elf"  "testInterupt.hex"
+Finished building: testInterupt.hex
+ 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "testInterupt.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7536	     60	    340	   7936	   1f00	testInterupt.elf
+Finished building: testInterupt.siz
+ 
+13:51:03 **** Incremental Build of configuration Debug for project testInterupt ****
+make all 
+Building file: ../Src/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F411xE -DUSE_HAL_DRIVER -DHSE_VALUE=96000000 -I"../Inc" -I"../system/Inc" -I"../system/Inc/cmsis" -I"../system/Inc/stm32f4-hal" -std=gnu11 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -c -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Src/main.c:62:50: warning: unused parameter 'huart' [-Wunused-parameter]
+ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+                                                  ^
+../Src/main.c: In function 'main':
+../Src/main.c:93:29: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   HAL_UART_Transmit(&huart6,"testprogramma uart-interupt\r\n",29,10);
+                             ^
+In file included from ../Inc/stm32f4xx_hal_conf.h:373:0,
+                 from ../system/Inc/stm32f4-hal/stm32f4xx_hal.h:48,
+                 from ../Src/main.c:34:
+../system/Inc/stm32f4-hal/stm32f4xx_hal_uart.h:647:19: note: expected '__uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^
+../Src/main.c: In function 'assert_failed':
+../Src/main.c:221:29: warning: unused parameter 'file' [-Wunused-parameter]
+ void assert_failed(uint8_t* file, uint32_t line)
+                             ^
+../Src/main.c:221:44: warning: unused parameter 'line' [-Wunused-parameter]
+ void assert_failed(uint8_t* file, uint32_t line)
+                                            ^
+Finished building: ../Src/main.c
+ 
+Building target: testInterupt.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"testInterupt.map" --specs=nano.specs -o "testInterupt.elf"  ./system/Src/stm32f4-hal/stm32f4xx_hal.o ./system/Src/stm32f4-hal/stm32f4xx_hal_cortex.o ./system/Src/stm32f4-hal/stm32f4xx_hal_flash.o ./system/Src/stm32f4-hal/stm32f4xx_hal_gpio.o ./system/Src/stm32f4-hal/stm32f4xx_hal_iwdg.o ./system/Src/stm32f4-hal/stm32f4xx_hal_pwr.o ./system/Src/stm32f4-hal/stm32f4xx_hal_rcc.o ./system/Src/stm32f4-hal/stm32f4xx_hal_uart.o  ./system/Src/newlib/_cxx.o ./system/Src/newlib/_exit.o ./system/Src/newlib/_sbrk.o ./system/Src/newlib/_startup.o ./system/Src/newlib/_syscalls.o ./system/Src/newlib/assert.o  ./system/Src/diag/Trace.o ./system/Src/diag/trace_impl.o  ./system/Src/cortexm/_initialize_hardware.o ./system/Src/cortexm/_reset_hardware.o ./system/Src/cortexm/exception_handlers.o  ./system/Src/cmsis/system_stm32f4xx.o ./system/Src/cmsis/vectors_stm32f411xe.o  ./Src/main.o ./Src/stm32f4xx_hal_msp.o ./Src/stm32f4xx_it.o   
+Finished building target: testInterupt.elf
+ 
+Invoking: Cross ARM GNU Create Flash Image
+arm-none-eabi-objcopy -O ihex "testInterupt.elf"  "testInterupt.hex"
+Finished building: testInterupt.hex
+ 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "testInterupt.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7524	     60	    340	   7924	   1ef4	testInterupt.elf
+Finished building: testInterupt.siz
+ 
+13:51:42 **** Incremental Build of configuration Debug for project testInterupt ****
+make all 
+Building file: ../Src/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F411xE -DUSE_HAL_DRIVER -DHSE_VALUE=96000000 -I"../Inc" -I"../system/Inc" -I"../system/Inc/cmsis" -I"../system/Inc/stm32f4-hal" -std=gnu11 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -c -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Src/main.c:62:50: warning: unused parameter 'huart' [-Wunused-parameter]
+ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+                                                  ^
+../Src/main.c: In function 'main':
+../Src/main.c:93:29: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   HAL_UART_Transmit(&huart6,"testprogramma uart-interupt\r\n",29,10);
+                             ^
+In file included from ../Inc/stm32f4xx_hal_conf.h:373:0,
+                 from ../system/Inc/stm32f4-hal/stm32f4xx_hal.h:48,
+                 from ../Src/main.c:34:
+../system/Inc/stm32f4-hal/stm32f4xx_hal_uart.h:647:19: note: expected '__uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^
+../Src/main.c: In function 'assert_failed':
+../Src/main.c:221:29: warning: unused parameter 'file' [-Wunused-parameter]
+ void assert_failed(uint8_t* file, uint32_t line)
+                             ^
+../Src/main.c:221:44: warning: unused parameter 'line' [-Wunused-parameter]
+ void assert_failed(uint8_t* file, uint32_t line)
+                                            ^
+Finished building: ../Src/main.c
+ 
+Building target: testInterupt.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"testInterupt.map" --specs=nano.specs -o "testInterupt.elf"  ./system/Src/stm32f4-hal/stm32f4xx_hal.o ./system/Src/stm32f4-hal/stm32f4xx_hal_cortex.o ./system/Src/stm32f4-hal/stm32f4xx_hal_flash.o ./system/Src/stm32f4-hal/stm32f4xx_hal_gpio.o ./system/Src/stm32f4-hal/stm32f4xx_hal_iwdg.o ./system/Src/stm32f4-hal/stm32f4xx_hal_pwr.o ./system/Src/stm32f4-hal/stm32f4xx_hal_rcc.o ./system/Src/stm32f4-hal/stm32f4xx_hal_uart.o  ./system/Src/newlib/_cxx.o ./system/Src/newlib/_exit.o ./system/Src/newlib/_sbrk.o ./system/Src/newlib/_startup.o ./system/Src/newlib/_syscalls.o ./system/Src/newlib/assert.o  ./system/Src/diag/Trace.o ./system/Src/diag/trace_impl.o  ./system/Src/cortexm/_initialize_hardware.o ./system/Src/cortexm/_reset_hardware.o ./system/Src/cortexm/exception_handlers.o  ./system/Src/cmsis/system_stm32f4xx.o ./system/Src/cmsis/vectors_stm32f411xe.o  ./Src/main.o ./Src/stm32f4xx_hal_msp.o ./Src/stm32f4xx_it.o   
+Finished building target: testInterupt.elf
+ 
+Invoking: Cross ARM GNU Create Flash Image
+arm-none-eabi-objcopy -O ihex "testInterupt.elf"  "testInterupt.hex"
+Finished building: testInterupt.hex
+ 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "testInterupt.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7536	     60	    340	   7936	   1f00	testInterupt.elf
+Finished building: testInterupt.siz
+ 
+13:52:17 **** Incremental Build of configuration Debug for project testInterupt ****
+make all 
+Building file: ../Src/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F411xE -DUSE_HAL_DRIVER -DHSE_VALUE=96000000 -I"../Inc" -I"../system/Inc" -I"../system/Inc/cmsis" -I"../system/Inc/stm32f4-hal" -std=gnu11 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -c -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Src/main.c:62:50: warning: unused parameter 'huart' [-Wunused-parameter]
+ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+                                                  ^
+../Src/main.c: In function 'main':
+../Src/main.c:93:29: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   HAL_UART_Transmit(&huart6,"testprogramma uart-interupt\r\n",29,10);
+                             ^
+In file included from ../Inc/stm32f4xx_hal_conf.h:373:0,
+                 from ../system/Inc/stm32f4-hal/stm32f4xx_hal.h:48,
+                 from ../Src/main.c:34:
+../system/Inc/stm32f4-hal/stm32f4xx_hal_uart.h:647:19: note: expected '__uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^
+../Src/main.c: In function 'assert_failed':
+../Src/main.c:221:29: warning: unused parameter 'file' [-Wunused-parameter]
+ void assert_failed(uint8_t* file, uint32_t line)
+                             ^
+../Src/main.c:221:44: warning: unused parameter 'line' [-Wunused-parameter]
+ void assert_failed(uint8_t* file, uint32_t line)
+                                            ^
+Finished building: ../Src/main.c
+ 
+Building target: testInterupt.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"testInterupt.map" --specs=nano.specs -o "testInterupt.elf"  ./system/Src/stm32f4-hal/stm32f4xx_hal.o ./system/Src/stm32f4-hal/stm32f4xx_hal_cortex.o ./system/Src/stm32f4-hal/stm32f4xx_hal_flash.o ./system/Src/stm32f4-hal/stm32f4xx_hal_gpio.o ./system/Src/stm32f4-hal/stm32f4xx_hal_iwdg.o ./system/Src/stm32f4-hal/stm32f4xx_hal_pwr.o ./system/Src/stm32f4-hal/stm32f4xx_hal_rcc.o ./system/Src/stm32f4-hal/stm32f4xx_hal_uart.o  ./system/Src/newlib/_cxx.o ./system/Src/newlib/_exit.o ./system/Src/newlib/_sbrk.o ./system/Src/newlib/_startup.o ./system/Src/newlib/_syscalls.o ./system/Src/newlib/assert.o  ./system/Src/diag/Trace.o ./system/Src/diag/trace_impl.o  ./system/Src/cortexm/_initialize_hardware.o ./system/Src/cortexm/_reset_hardware.o ./system/Src/cortexm/exception_handlers.o  ./system/Src/cmsis/system_stm32f4xx.o ./system/Src/cmsis/vectors_stm32f411xe.o  ./Src/main.o ./Src/stm32f4xx_hal_msp.o ./Src/stm32f4xx_it.o   
+Finished building target: testInterupt.elf
+ 
+Invoking: Cross ARM GNU Create Flash Image
+arm-none-eabi-objcopy -O ihex "testInterupt.elf"  "testInterupt.hex"
+Finished building: testInterupt.hex
+ 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "testInterupt.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7524	     60	    340	   7924	   1ef4	testInterupt.elf
+Finished building: testInterupt.siz
+ 
+13:54:31 **** Incremental Build of configuration Debug for project testInterupt ****
+make all 
+Building file: ../Src/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F411xE -DUSE_HAL_DRIVER -DHSE_VALUE=96000000 -I"../Inc" -I"../system/Inc" -I"../system/Inc/cmsis" -I"../system/Inc/stm32f4-hal" -std=gnu11 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -c -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Src/main.c:62:50: warning: unused parameter 'huart' [-Wunused-parameter]
+ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+                                                  ^
+../Src/main.c: In function 'main':
+../Src/main.c:93:29: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   HAL_UART_Transmit(&huart6,"testprogramma uart-interupt\r\n",29,10);
+                             ^
+In file included from ../Inc/stm32f4xx_hal_conf.h:373:0,
+                 from ../system/Inc/stm32f4-hal/stm32f4xx_hal.h:48,
+                 from ../Src/main.c:34:
+../system/Inc/stm32f4-hal/stm32f4xx_hal_uart.h:647:19: note: expected '__uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^
+../Src/main.c: In function 'assert_failed':
+../Src/main.c:221:29: warning: unused parameter 'file' [-Wunused-parameter]
+ void assert_failed(uint8_t* file, uint32_t line)
+                             ^
+../Src/main.c:221:44: warning: unused parameter 'line' [-Wunused-parameter]
+ void assert_failed(uint8_t* file, uint32_t line)
+                                            ^
+Finished building: ../Src/main.c
+ 
+Building file: ../Src/stm32f4xx_it.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F411xE -DUSE_HAL_DRIVER -DHSE_VALUE=96000000 -I"../Inc" -I"../system/Inc" -I"../system/Inc/cmsis" -I"../system/Inc/stm32f4-hal" -std=gnu11 -MMD -MP -MF"Src/stm32f4xx_it.d" -MT"Src/stm32f4xx_it.o" -c -o "Src/stm32f4xx_it.o" "../Src/stm32f4xx_it.c"
+Finished building: ../Src/stm32f4xx_it.c
+ 
+Building target: testInterupt.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"testInterupt.map" --specs=nano.specs -o "testInterupt.elf"  ./system/Src/stm32f4-hal/stm32f4xx_hal.o ./system/Src/stm32f4-hal/stm32f4xx_hal_cortex.o ./system/Src/stm32f4-hal/stm32f4xx_hal_flash.o ./system/Src/stm32f4-hal/stm32f4xx_hal_gpio.o ./system/Src/stm32f4-hal/stm32f4xx_hal_iwdg.o ./system/Src/stm32f4-hal/stm32f4xx_hal_pwr.o ./system/Src/stm32f4-hal/stm32f4xx_hal_rcc.o ./system/Src/stm32f4-hal/stm32f4xx_hal_uart.o  ./system/Src/newlib/_cxx.o ./system/Src/newlib/_exit.o ./system/Src/newlib/_sbrk.o ./system/Src/newlib/_startup.o ./system/Src/newlib/_syscalls.o ./system/Src/newlib/assert.o  ./system/Src/diag/Trace.o ./system/Src/diag/trace_impl.o  ./system/Src/cortexm/_initialize_hardware.o ./system/Src/cortexm/_reset_hardware.o ./system/Src/cortexm/exception_handlers.o  ./system/Src/cmsis/system_stm32f4xx.o ./system/Src/cmsis/vectors_stm32f411xe.o  ./Src/main.o ./Src/stm32f4xx_hal_msp.o ./Src/stm32f4xx_it.o   
+Finished building target: testInterupt.elf
+ 
+Invoking: Cross ARM GNU Create Flash Image
+arm-none-eabi-objcopy -O ihex "testInterupt.elf"  "testInterupt.hex"
+Finished building: testInterupt.hex
+ 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "testInterupt.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7524	     60	    340	   7924	   1ef4	testInterupt.elf
+Finished building: testInterupt.siz
+ 
+13:54:50 **** Incremental Build of configuration Debug for project testInterupt ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "testInterupt.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7524	     60	    340	   7924	   1ef4	testInterupt.elf
+Finished building: testInterupt.siz
+ 
+13:56:58 **** Incremental Build of configuration Debug for project testInterupt ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "testInterupt.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7524	     60	    340	   7924	   1ef4	testInterupt.elf
+Finished building: testInterupt.siz
+ 

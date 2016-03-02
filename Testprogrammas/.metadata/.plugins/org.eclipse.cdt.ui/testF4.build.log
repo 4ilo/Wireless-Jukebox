@@ -1,0 +1,9 @@
+13:06:04 **** Incremental Build of configuration Debug for project testF4 ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "testF4.elf"
+/bin/sh: arm-none-eabi-size: command not found
+make: *** [testF4.siz] Error 127
+
+13:06:04 Build Finished (took 122ms)
+
