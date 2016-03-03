@@ -1,0 +1,544 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Olivier\Desktop\Project 2\Wireless Jukebox pcb\PCB.PcbDoc
+Date     : 3/03/2016
+Time     : 15:59:23
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=0.5mm) (Preferred=0.5mm) (InNet('USB'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.152mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=0.5mm) (Preferred=0.5mm) (InNet('VCC'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=0.152mm) (InDifferentialPairClass('DIFF100'))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net CARDDET Between Pad sd-9 (15.24,37.111mm) And Pad Stm32F4-64 (52.5,30.5mm)
+   Violation between Un-Routed Net Constraint: Net DACCLK Between Pad Stm32F4-30 (40.75,22.25mm) And Pad Dac-3 (65.3,32mm)
+   Violation between Un-Routed Net Constraint: Net DACDIN Between Pad Stm32F4-32 (41.75,22.25mm) And Pad Dac-4 (65.95,32mm)
+   Violation between Un-Routed Net Constraint: Net DACOUT Between Pad Dac-6 (65.3,37mm) And Pad C19-1 (66.35,40.425mm)
+   Violation between Un-Routed Net Constraint: Net DACOUT Between Pad Dac-6 (65.3,37mm) And Pad P6-1 (71,37mm)
+   Violation between Un-Routed Net Constraint: Net DACSS Between Pad Stm32F4-29 (40.25,22.25mm) And Pad Dac-2 (64.65,32mm)
+   Violation between Un-Routed Net Constraint: Net ESPTX Between Pad H1-1 (30.475,12.6mm) And Pad Stm32F4-69 (52.5,33mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Max1806-6 (73.3,23mm) And Pad Max1806-5 (73.95,23mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C10-1 (31.575,26.25mm) And Pad C11-1 (31.575,28.4mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C15-1 (27.9,43.075mm) And Pad C14-1 (30.05,43.075mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C17-2 (64.1,42.225mm) And Pad C19-2 (66.35,42.225mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C12-2 (48.475,17.05mm) And Pad C5-1 (50.75,17.05mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C4-1 (31.575,23.95mm) And Pad C10-1 (31.575,26.25mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C9-2 (31.575,30.725mm) And Pad C11-1 (31.575,28.4mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C9-2 (31.575,30.725mm) And Pad C6-1 (31.575,33.125mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C7-1 (38.8,42.625mm) And Pad R4-2 (41.75,42.625mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C2-1 (73.875,26.675mm) And Pad Max1806-5 (73.95,23mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C3-1 (57.1,36mm) And Pad C13-2 (58.925,33.8mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Stm32F4-20 (37,26.5mm) And Pad Stm32F4-10 (37,31.5mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Stm32F4-74 (52.5,35.5mm) And Pad C3-1 (57.1,36mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C7-1 (38.8,42.625mm) And Pad Stm32F4-99 (39.25,37.75mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Dac-8 (64,37mm) And Pad C17-2 (64.1,42.225mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Stm32F4-27 (39.25,22.25mm) And Pad C8-1 (39.75,17.15mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Stm32F4-49 (50.25,22.25mm) And Pad C5-1 (50.75,17.05mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Con1-Gnd (83.01,21.25mm) And Pad Con1-gnd (84.72,26mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C20-1 (56.1,27.2mm) And Pad C18-1 (64.025,27.375mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Con1-Gnd (83.01,21.25mm) And Pad Con1-gnd (84.72,14mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C1-1 (70.85,14.475mm) And Pad Max1806-6 (73.3,23mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad H1-2 (33.015,12.6mm) And Pad C8-1 (39.75,17.15mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Con1-gnd (84.72,26mm) And Pad jack-1 (85.5,38mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C12-2 (48.475,17.05mm) And Pad UART-5 (48.64,4.05mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C16-1 (25.725,5mm) And Pad H1-2 (33.015,12.6mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad R4-2 (41.75,42.625mm) And Pad SWD-3 (48.68,51.525mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad sd-6 (15.24,33.811mm) And Pad C6-1 (31.575,33.125mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C10-1 (31.575,26.25mm) And Pad Stm32F4-20 (37,26.5mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Stm32F4-20 (37,26.5mm) And Pad Stm32F4-27 (39.25,22.25mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C3-1 (57.1,36mm) And Pad Dac-8 (64,37mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Stm32F4-10 (37,31.5mm) And Pad Stm32F4-99 (39.25,37.75mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C8-1 (39.75,17.15mm) And Pad C12-2 (48.475,17.05mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C14-1 (30.05,43.075mm) And Pad C7-1 (38.8,42.625mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C20-1 (56.1,27.2mm) And Pad C13-2 (58.925,33.8mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C18-1 (64.025,27.375mm) And Pad C2-1 (73.875,26.675mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Max1806-5 (73.95,23mm) And Pad Con1-Gnd (83.01,21.25mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Stm32F4-49 (50.25,22.25mm) And Pad C20-1 (56.1,27.2mm)
+   Violation between Un-Routed Net Constraint: Net JACKOUT Between Pad P6-2 (71,39.54mm) And Pad P7-2 (75,39.54mm)
+   Violation between Un-Routed Net Constraint: Net JACKOUT Between Pad P7-2 (75,39.54mm) And Pad jack-3 (80.5,43mm)
+   Violation between Un-Routed Net Constraint: Net JTCK Between Pad SWD-2 (46.14,51.525mm) And Pad Stm32F4-76 (50.75,37.75mm)
+   Violation between Un-Routed Net Constraint: Net JTDO Between Pad Stm32F4-89 (44.25,37.75mm) And Pad SWD-6 (56.3,51.525mm)
+   Violation between Un-Routed Net Constraint: Net JTMS Between Pad SWD-4 (51.22,51.525mm) And Pad Stm32F4-72 (52.5,34.5mm)
+   Violation between Un-Routed Net Constraint: Net NetC12_1 Between Pad C12-1 (48.475,18.85mm) And Pad Stm32F4-48 (49.75,22.25mm)
+   Violation between Un-Routed Net Constraint: Net NetC13_1 Between Pad Stm32F4-73 (52.5,35mm) And Pad C13-1 (57.125,33.8mm)
+   Violation between Un-Routed Net Constraint: Net NetC14_2 Between Pad X1-2 (31.465,39.375mm) And Pad R1-1 (31.55,35.425mm)
+   Violation between Un-Routed Net Constraint: Net NetC14_2 Between Pad X1-2 (31.465,39.375mm) And Pad C14-2 (31.85,43.075mm)
+   Violation between Un-Routed Net Constraint: Net NetC15_2 Between Pad C15-2 (26.1,43.075mm) And Pad X1-1 (26.585,39.375mm)
+   Violation between Un-Routed Net Constraint: Net NetC15_2 Between Pad X1-1 (26.585,39.375mm) And Pad Stm32F4-12 (37,30.5mm)
+   Violation between Un-Routed Net Constraint: Net NetH1_5 Between Pad R2-2 (27.5,7.5mm) And Pad H1-5 (30.475,7.52mm)
+   Violation between Un-Routed Net Constraint: Net NetH1_6 Between Pad H1-6 (33.015,7.52mm) And Pad R3-1 (36.65,7.5mm)
+   Violation between Un-Routed Net Constraint: Net Netjack_2 Between Pad P7-1 (75,37mm) And Pad jack-2 (80.5,33mm)
+   Violation between Un-Routed Net Constraint: Net NetR1_2 Between Pad R1-2 (33.35,35.425mm) And Pad Stm32F4-13 (37,30mm)
+   Violation between Un-Routed Net Constraint: Net NetR4_1 Between Pad Stm32F4-94 (41.75,37.75mm) And Pad R4-1 (41.75,40.825mm)
+   Violation between Un-Routed Net Constraint: Net NetR5_1 Between Pad Stm32F4-37 (44.25,22.25mm) And Pad R5-1 (44.25,18.95mm)
+   Violation between Un-Routed Net Constraint: Net NRST Between Pad Stm32F4-14 (37,29.5mm) And Pad SWD-5 (53.76,51.525mm)
+   Violation between Un-Routed Net Constraint: Net PCRX Between Pad Stm32F4-26 (38.75,22.25mm) And Pad UART-3 (53.72,4.05mm)
+   Violation between Un-Routed Net Constraint: Net PCTX Between Pad Stm32F4-25 (37,24mm) And Pad UART-2 (56.26,4.05mm)
+   Violation between Un-Routed Net Constraint: Net PWMOUT Between Pad Stm32F4-61 (52.5,29mm) And Pad C20-2 (56.1,29mm)
+   Violation between Un-Routed Net Constraint: Net PWMOUT Between Pad C20-2 (56.1,29mm) And Pad P6-3 (71,42.08mm)
+   Violation between Un-Routed Net Constraint: Net SDCLK Between Pad sd-5 (15.24,32.711mm) And Pad Stm32F4-54 (52.5,25.5mm)
+   Violation between Un-Routed Net Constraint: Net SDCMD Between Pad sd-3 (15.24,30.511mm) And Pad R10-1 (19.875,18.35mm)
+   Violation between Un-Routed Net Constraint: Net SDCMD Between Pad R10-1 (19.875,18.35mm) And Pad Stm32F4-31 (41.25,22.25mm)
+   Violation between Un-Routed Net Constraint: Net SDDAT0 Between Pad sd-7 (15.24,34.911mm) And Pad R-Pullup-1 (17.3,18.35mm)
+   Violation between Un-Routed Net Constraint: Net SDDAT0 Between Pad sd-7 (15.24,34.911mm) And Pad Stm32F4-65 (52.5,31mm)
+   Violation between Un-Routed Net Constraint: Net SDDAT1 Between Pad sd-8 (15.24,36.011mm) And Pad R7-1 (17.3,22.8mm)
+   Violation between Un-Routed Net Constraint: Net SDDAT1 Between Pad sd-8 (15.24,36.011mm) And Pad Stm32F4-66 (52.5,31.5mm)
+   Violation between Un-Routed Net Constraint: Net SDDAT2 Between Pad sd-1 (15.24,28.311mm) And Pad R8-1 (19.825,22.8mm)
+   Violation between Un-Routed Net Constraint: Net SDDAT2 Between Pad sd-1 (15.24,28.311mm) And Pad Stm32F4-68 (52.5,32.5mm)
+   Violation between Un-Routed Net Constraint: Net SDDAT3 Between Pad sd-2 (15.24,29.411mm) And Pad R9-1 (22.275,22.75mm)
+   Violation between Un-Routed Net Constraint: Net SDDAT3 Between Pad R9-1 (22.275,22.75mm) And Pad Stm32F4-79 (49.25,37.75mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad Stm32F4-22 (37,25.5mm) And Pad Stm32F4-21 (37,26mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad Stm32F4-21 (37,26mm) And Pad Stm32F4-19 (37,27mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad C10-2 (33.375,26.25mm) And Pad C11-2 (33.375,28.4mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad C4-2 (33.375,23.95mm) And Pad C10-2 (33.375,26.25mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad C9-1 (33.375,30.725mm) And Pad C11-2 (33.375,28.4mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad C9-1 (33.375,30.725mm) And Pad C6-2 (33.375,33.125mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad Stm32F4-11 (37,31mm) And Pad Stm32F4-6 (37,33.5mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad R8-2 (19.825,21mm) And Pad R9-2 (22.275,20.95mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad R7-2 (17.3,21mm) And Pad R8-2 (19.825,21mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad R-Pullup-2 (17.3,16.55mm) And Pad R10-2 (19.875,16.55mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad Dac-1 (64,32mm) And Pad C18-2 (64.025,29.175mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad C16-2 (27.525,5mm) And Pad H1-7 (30.475,4.98mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad Stm32F4-100 (38.75,37.75mm) And Pad C7-2 (38.8,40.825mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad C8-2 (39.75,18.95mm) And Pad Stm32F4-28 (39.75,22.25mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad Stm32F4-50 (50.75,22.25mm) And Pad C5-2 (50.75,18.85mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad C17-1 (64.1,40.425mm) And Pad Dac-7 (64.65,37mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad R2-1 (25.7,7.5mm) And Pad C16-2 (27.525,5mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad H1-7 (30.475,4.98mm) And Pad H1-3 (30.475,10.06mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad C8-2 (39.75,18.95mm) And Pad R5-2 (44.25,17.15mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad Stm32F4-75 (52.5,36mm) And Pad C3-2 (58.9,36mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad C18-2 (64.025,29.175mm) And Track on layer Top Layer (72,26.675mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad H1-7 (30.475,4.98mm) And Pad R3-2 (38.45,7.5mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad sd-4 (15.24,31.611mm) And Pad R7-2 (17.3,21mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad C7-2 (38.8,40.825mm) And Pad SWD-1 (43.6,51.525mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad C10-2 (33.375,26.25mm) And Pad Stm32F4-21 (37,26mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad C9-1 (33.375,30.725mm) And Pad Stm32F4-11 (37,31mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad R-Pullup-2 (17.3,16.55mm) And Pad R7-2 (17.3,21mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad Dac-1 (64,32mm) And Pad Dac-7 (64.65,37mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad Stm32F4-6 (37,33.5mm) And Pad Stm32F4-100 (38.75,37.75mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad Stm32F4-22 (37,25.5mm) And Pad Stm32F4-28 (39.75,22.25mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad C3-2 (58.9,36mm) And Pad Dac-7 (64.65,37mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad R5-2 (44.25,17.15mm) And Pad C5-2 (50.75,18.85mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad R3-2 (38.45,7.5mm) And Pad C8-2 (39.75,18.95mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad R9-2 (22.275,20.95mm) And Pad C4-2 (33.375,23.95mm)
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad Stm32F4-100 (38.75,37.75mm) And Pad Stm32F4-75 (52.5,36mm)
+Rule Violations :112
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)
+   Violation between Hole Size Constraint (3.5mm > 2.54mm) : Pad Free-gnd(20mm,4mm)  Multi-Layer
+   Violation between Hole Size Constraint (3.5mm > 2.54mm) : Pad Free-gnd(70mm,4mm)  Multi-Layer
+   Violation between Hole Size Constraint (3.5mm > 2.54mm) : Pad Free-gnd(70mm,54mm)  Multi-Layer
+   Violation between Hole Size Constraint (3.5mm > 2.54mm) : Pad Free-gnd(20mm,54mm)  Multi-Layer
+Rule Violations :4
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
+   Violation between Pad Dac-6(65.3mm,37mm)  Top Layer and 
+                     Pad Dac-5(65.95mm,37mm)  Top Layer
+   Violation between Pad Dac-7(64.65mm,37mm)  Top Layer and 
+                     Pad Dac-6(65.3mm,37mm)  Top Layer
+   Violation between Pad Dac-8(64mm,37mm)  Top Layer and 
+                     Pad Dac-7(64.65mm,37mm)  Top Layer
+   Violation between Pad Dac-3(65.3mm,32mm)  Top Layer and 
+                     Pad Dac-4(65.95mm,32mm)  Top Layer
+   Violation between Pad Dac-2(64.65mm,32mm)  Top Layer and 
+                     Pad Dac-3(65.3mm,32mm)  Top Layer
+   Violation between Pad Dac-1(64mm,32mm)  Top Layer and 
+                     Pad Dac-2(64.65mm,32mm)  Top Layer
+   Violation between Pad Stm32F4-99(39.25mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-100(38.75mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-98(39.75mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-99(39.25mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-97(40.25mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-98(39.75mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-96(40.75mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-97(40.25mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-95(41.25mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-96(40.75mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-94(41.75mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-95(41.25mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-93(42.25mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-94(41.75mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-92(42.75mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-93(42.25mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-91(43.25mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-92(42.75mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-90(43.75mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-91(43.25mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-89(44.25mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-90(43.75mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-88(44.75mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-89(44.25mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-87(45.25mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-88(44.75mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-86(45.75mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-87(45.25mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-85(46.25mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-86(45.75mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-84(46.75mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-85(46.25mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-83(47.25mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-84(46.75mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-82(47.75mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-83(47.25mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-81(48.25mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-82(47.75mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-80(48.75mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-81(48.25mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-79(49.25mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-80(48.75mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-78(49.75mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-79(49.25mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-77(50.25mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-78(49.75mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-76(50.75mm,37.75mm)  Top Layer and 
+                     Pad Stm32F4-77(50.25mm,37.75mm)  Top Layer
+   Violation between Pad Stm32F4-74(52.5mm,35.5mm)  Top Layer and 
+                     Pad Stm32F4-75(52.5mm,36mm)  Top Layer
+   Violation between Pad Stm32F4-73(52.5mm,35mm)  Top Layer and 
+                     Pad Stm32F4-74(52.5mm,35.5mm)  Top Layer
+   Violation between Pad Stm32F4-72(52.5mm,34.5mm)  Top Layer and 
+                     Pad Stm32F4-73(52.5mm,35mm)  Top Layer
+   Violation between Pad Stm32F4-71(52.5mm,34mm)  Top Layer and 
+                     Pad Stm32F4-72(52.5mm,34.5mm)  Top Layer
+   Violation between Pad Stm32F4-70(52.5mm,33.5mm)  Top Layer and 
+                     Pad Stm32F4-71(52.5mm,34mm)  Top Layer
+   Violation between Pad Stm32F4-69(52.5mm,33mm)  Top Layer and 
+                     Pad Stm32F4-70(52.5mm,33.5mm)  Top Layer
+   Violation between Pad Stm32F4-68(52.5mm,32.5mm)  Top Layer and 
+                     Pad Stm32F4-69(52.5mm,33mm)  Top Layer
+   Violation between Pad Stm32F4-67(52.5mm,32mm)  Top Layer and 
+                     Pad Stm32F4-68(52.5mm,32.5mm)  Top Layer
+   Violation between Pad Stm32F4-66(52.5mm,31.5mm)  Top Layer and 
+                     Pad Stm32F4-67(52.5mm,32mm)  Top Layer
+   Violation between Pad Stm32F4-65(52.5mm,31mm)  Top Layer and 
+                     Pad Stm32F4-66(52.5mm,31.5mm)  Top Layer
+   Violation between Pad Stm32F4-64(52.5mm,30.5mm)  Top Layer and 
+                     Pad Stm32F4-65(52.5mm,31mm)  Top Layer
+   Violation between Pad Stm32F4-63(52.5mm,30mm)  Top Layer and 
+                     Pad Stm32F4-64(52.5mm,30.5mm)  Top Layer
+   Violation between Pad Stm32F4-62(52.5mm,29.5mm)  Top Layer and 
+                     Pad Stm32F4-63(52.5mm,30mm)  Top Layer
+   Violation between Pad Stm32F4-61(52.5mm,29mm)  Top Layer and 
+                     Pad Stm32F4-62(52.5mm,29.5mm)  Top Layer
+   Violation between Pad Stm32F4-60(52.5mm,28.5mm)  Top Layer and 
+                     Pad Stm32F4-61(52.5mm,29mm)  Top Layer
+   Violation between Pad Stm32F4-59(52.5mm,28mm)  Top Layer and 
+                     Pad Stm32F4-60(52.5mm,28.5mm)  Top Layer
+   Violation between Pad Stm32F4-58(52.5mm,27.5mm)  Top Layer and 
+                     Pad Stm32F4-59(52.5mm,28mm)  Top Layer
+   Violation between Pad Stm32F4-57(52.5mm,27mm)  Top Layer and 
+                     Pad Stm32F4-58(52.5mm,27.5mm)  Top Layer
+   Violation between Pad Stm32F4-56(52.5mm,26.5mm)  Top Layer and 
+                     Pad Stm32F4-57(52.5mm,27mm)  Top Layer
+   Violation between Pad Stm32F4-55(52.5mm,26mm)  Top Layer and 
+                     Pad Stm32F4-56(52.5mm,26.5mm)  Top Layer
+   Violation between Pad Stm32F4-54(52.5mm,25.5mm)  Top Layer and 
+                     Pad Stm32F4-55(52.5mm,26mm)  Top Layer
+   Violation between Pad Stm32F4-53(52.5mm,25mm)  Top Layer and 
+                     Pad Stm32F4-54(52.5mm,25.5mm)  Top Layer
+   Violation between Pad Stm32F4-52(52.5mm,24.5mm)  Top Layer and 
+                     Pad Stm32F4-53(52.5mm,25mm)  Top Layer
+   Violation between Pad Stm32F4-51(52.5mm,24mm)  Top Layer and 
+                     Pad Stm32F4-52(52.5mm,24.5mm)  Top Layer
+   Violation between Pad Stm32F4-49(50.25mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-50(50.75mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-48(49.75mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-49(50.25mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-47(49.25mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-48(49.75mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-46(48.75mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-47(49.25mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-45(48.25mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-46(48.75mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-44(47.75mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-45(48.25mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-43(47.25mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-44(47.75mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-42(46.75mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-43(47.25mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-41(46.25mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-42(46.75mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-40(45.75mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-41(46.25mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-39(45.25mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-40(45.75mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-38(44.75mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-39(45.25mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-37(44.25mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-38(44.75mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-36(43.75mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-37(44.25mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-35(43.25mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-36(43.75mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-34(42.75mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-35(43.25mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-33(42.25mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-34(42.75mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-32(41.75mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-33(42.25mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-31(41.25mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-32(41.75mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-30(40.75mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-31(41.25mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-29(40.25mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-30(40.75mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-28(39.75mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-29(40.25mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-27(39.25mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-28(39.75mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-26(38.75mm,22.25mm)  Top Layer and 
+                     Pad Stm32F4-27(39.25mm,22.25mm)  Top Layer
+   Violation between Pad Stm32F4-24(37mm,24.5mm)  Top Layer and 
+                     Pad Stm32F4-25(37mm,24mm)  Top Layer
+   Violation between Pad Stm32F4-23(37mm,25mm)  Top Layer and 
+                     Pad Stm32F4-24(37mm,24.5mm)  Top Layer
+   Violation between Pad Stm32F4-22(37mm,25.5mm)  Top Layer and 
+                     Pad Stm32F4-23(37mm,25mm)  Top Layer
+   Violation between Pad Stm32F4-21(37mm,26mm)  Top Layer and 
+                     Pad Stm32F4-22(37mm,25.5mm)  Top Layer
+   Violation between Pad Stm32F4-20(37mm,26.5mm)  Top Layer and 
+                     Pad Stm32F4-21(37mm,26mm)  Top Layer
+   Violation between Pad Stm32F4-19(37mm,27mm)  Top Layer and 
+                     Pad Stm32F4-20(37mm,26.5mm)  Top Layer
+   Violation between Pad Stm32F4-18(37mm,27.5mm)  Top Layer and 
+                     Pad Stm32F4-19(37mm,27mm)  Top Layer
+   Violation between Pad Stm32F4-17(37mm,28mm)  Top Layer and 
+                     Pad Stm32F4-18(37mm,27.5mm)  Top Layer
+   Violation between Pad Stm32F4-16(37mm,28.5mm)  Top Layer and 
+                     Pad Stm32F4-17(37mm,28mm)  Top Layer
+   Violation between Pad Stm32F4-15(37mm,29mm)  Top Layer and 
+                     Pad Stm32F4-16(37mm,28.5mm)  Top Layer
+   Violation between Pad Stm32F4-14(37mm,29.5mm)  Top Layer and 
+                     Pad Stm32F4-15(37mm,29mm)  Top Layer
+   Violation between Pad Stm32F4-13(37mm,30mm)  Top Layer and 
+                     Pad Stm32F4-14(37mm,29.5mm)  Top Layer
+   Violation between Pad Stm32F4-12(37mm,30.5mm)  Top Layer and 
+                     Pad Stm32F4-13(37mm,30mm)  Top Layer
+   Violation between Pad Stm32F4-11(37mm,31mm)  Top Layer and 
+                     Pad Stm32F4-12(37mm,30.5mm)  Top Layer
+   Violation between Pad Stm32F4-10(37mm,31.5mm)  Top Layer and 
+                     Pad Stm32F4-11(37mm,31mm)  Top Layer
+   Violation between Pad Stm32F4-9(37mm,32mm)  Top Layer and 
+                     Pad Stm32F4-10(37mm,31.5mm)  Top Layer
+   Violation between Pad Stm32F4-8(37mm,32.5mm)  Top Layer and 
+                     Pad Stm32F4-9(37mm,32mm)  Top Layer
+   Violation between Pad Stm32F4-7(37mm,33mm)  Top Layer and 
+                     Pad Stm32F4-8(37mm,32.5mm)  Top Layer
+   Violation between Pad Stm32F4-6(37mm,33.5mm)  Top Layer and 
+                     Pad Stm32F4-7(37mm,33mm)  Top Layer
+   Violation between Pad Stm32F4-5(37mm,34mm)  Top Layer and 
+                     Pad Stm32F4-6(37mm,33.5mm)  Top Layer
+   Violation between Pad Stm32F4-4(37mm,34.5mm)  Top Layer and 
+                     Pad Stm32F4-5(37mm,34mm)  Top Layer
+   Violation between Pad Stm32F4-3(37mm,35mm)  Top Layer and 
+                     Pad Stm32F4-4(37mm,34.5mm)  Top Layer
+   Violation between Pad Stm32F4-2(37mm,35.5mm)  Top Layer and 
+                     Pad Stm32F4-3(37mm,35mm)  Top Layer
+   Violation between Pad Stm32F4-1(37mm,36mm)  Top Layer and 
+                     Pad Stm32F4-2(37mm,35.5mm)  Top Layer
+   Violation between Pad Max1806-6(73.3mm,23mm)  Top Layer and 
+                     Pad Max1806-5(73.95mm,23mm)  Top Layer
+   Violation between Pad Max1806-7(72.65mm,23mm)  Top Layer and 
+                     Pad Max1806-6(73.3mm,23mm)  Top Layer
+   Violation between Pad Max1806-8(72mm,23mm)  Top Layer and 
+                     Pad Max1806-7(72.65mm,23mm)  Top Layer
+   Violation between Pad Max1806-3(73.3mm,18mm)  Top Layer and 
+                     Pad Max1806-4(73.95mm,18mm)  Top Layer
+   Violation between Pad Max1806-2(72.65mm,18mm)  Top Layer and 
+                     Pad Max1806-3(73.3mm,18mm)  Top Layer
+   Violation between Pad Max1806-1(72mm,18mm)  Top Layer and 
+                     Pad Max1806-2(72.65mm,18mm)  Top Layer
+Rule Violations :108
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)
+   Violation between Track (79mm,14mm)(95mm,14mm)  Top Overlay and 
+                     Pad Con1-gnd(84.72mm,14mm)  Multi-Layer
+   Violation between Track (79mm,26mm)(95mm,26mm)  Top Overlay and 
+                     Pad Con1-gnd(84.72mm,26mm)  Multi-Layer
+   Violation between Track (43.65mm,18.05mm)(44.85mm,18.05mm)  Top Overlay and 
+                     Pad R5-2(44.25mm,17.15mm)  Top Layer
+   Violation between Track (43.65mm,18.05mm)(44.85mm,18.05mm)  Top Overlay and 
+                     Pad R5-1(44.25mm,18.95mm)  Top Layer
+   Violation between Track (41.15mm,41.725mm)(42.35mm,41.725mm)  Top Overlay and 
+                     Pad R4-2(41.75mm,42.625mm)  Top Layer
+   Violation between Track (41.15mm,41.725mm)(42.35mm,41.725mm)  Top Overlay and 
+                     Pad R4-1(41.75mm,40.825mm)  Top Layer
+   Violation between Track (55.5mm,28.1mm)(56.7mm,28.1mm)  Top Overlay and 
+                     Pad C20-2(56.1mm,29mm)  Top Layer
+   Violation between Track (55.5mm,28.1mm)(56.7mm,28.1mm)  Top Overlay and 
+                     Pad C20-1(56.1mm,27.2mm)  Top Layer
+   Violation between Track (65.75mm,41.325mm)(66.95mm,41.325mm)  Top Overlay and 
+                     Pad C19-2(66.35mm,42.225mm)  Top Layer
+   Violation between Track (65.75mm,41.325mm)(66.95mm,41.325mm)  Top Overlay and 
+                     Pad C19-1(66.35mm,40.425mm)  Top Layer
+   Violation between Track (63.5mm,41.325mm)(64.7mm,41.325mm)  Top Overlay and 
+                     Pad C17-2(64.1mm,42.225mm)  Top Layer
+   Violation between Track (63.5mm,41.325mm)(64.7mm,41.325mm)  Top Overlay and 
+                     Pad C17-1(64.1mm,40.425mm)  Top Layer
+   Violation between Track (63.425mm,28.275mm)(64.625mm,28.275mm)  Top Overlay and 
+                     Pad C18-2(64.025mm,29.175mm)  Top Layer
+   Violation between Track (63.425mm,28.275mm)(64.625mm,28.275mm)  Top Overlay and 
+                     Pad C18-1(64.025mm,27.375mm)  Top Layer
+   Violation between Track (26.6mm,6.9mm)(26.6mm,8.1mm)  Top Overlay and 
+                     Pad R2-2(27.5mm,7.5mm)  Top Layer
+   Violation between Track (26.6mm,6.9mm)(26.6mm,8.1mm)  Top Overlay and 
+                     Pad R2-1(25.7mm,7.5mm)  Top Layer
+   Violation between Track (30.95mm,42.475mm)(30.95mm,43.675mm)  Top Overlay and 
+                     Pad C14-2(31.85mm,43.075mm)  Top Layer
+   Violation between Track (30.95mm,42.475mm)(30.95mm,43.675mm)  Top Overlay and 
+                     Pad C14-1(30.05mm,43.075mm)  Top Layer
+   Violation between Track (58mm,35.4mm)(58mm,36.6mm)  Top Overlay and 
+                     Pad C3-2(58.9mm,36mm)  Top Layer
+   Violation between Track (58mm,35.4mm)(58mm,36.6mm)  Top Overlay and 
+                     Pad C3-1(57.1mm,36mm)  Top Layer
+   Violation between Track (38.2mm,41.725mm)(39.4mm,41.725mm)  Top Overlay and 
+                     Pad C7-2(38.8mm,40.825mm)  Top Layer
+   Violation between Track (38.2mm,41.725mm)(39.4mm,41.725mm)  Top Overlay and 
+                     Pad C7-1(38.8mm,42.625mm)  Top Layer
+   Violation between Track (19.275mm,17.45mm)(20.475mm,17.45mm)  Top Overlay and 
+                     Pad R10-2(19.875mm,16.55mm)  Top Layer
+   Violation between Track (19.275mm,17.45mm)(20.475mm,17.45mm)  Top Overlay and 
+                     Pad R10-1(19.875mm,18.35mm)  Top Layer
+   Violation between Track (21.675mm,21.85mm)(22.875mm,21.85mm)  Top Overlay and 
+                     Pad R9-2(22.275mm,20.95mm)  Top Layer
+   Violation between Track (21.675mm,21.85mm)(22.875mm,21.85mm)  Top Overlay and 
+                     Pad R9-1(22.275mm,22.75mm)  Top Layer
+   Violation between Track (19.225mm,21.9mm)(20.425mm,21.9mm)  Top Overlay and 
+                     Pad R8-2(19.825mm,21mm)  Top Layer
+   Violation between Track (19.225mm,21.9mm)(20.425mm,21.9mm)  Top Overlay and 
+                     Pad R8-1(19.825mm,22.8mm)  Top Layer
+   Violation between Track (16.7mm,21.9mm)(17.9mm,21.9mm)  Top Overlay and 
+                     Pad R7-2(17.3mm,21mm)  Top Layer
+   Violation between Track (16.7mm,21.9mm)(17.9mm,21.9mm)  Top Overlay and 
+                     Pad R7-1(17.3mm,22.8mm)  Top Layer
+   Violation between Track (50.15mm,17.95mm)(51.35mm,17.95mm)  Top Overlay and 
+                     Pad C5-2(50.75mm,18.85mm)  Top Layer
+   Violation between Track (50.15mm,17.95mm)(51.35mm,17.95mm)  Top Overlay and 
+                     Pad C5-1(50.75mm,17.05mm)  Top Layer
+   Violation between Track (39.15mm,18.05mm)(40.35mm,18.05mm)  Top Overlay and 
+                     Pad C8-2(39.75mm,18.95mm)  Top Layer
+   Violation between Track (39.15mm,18.05mm)(40.35mm,18.05mm)  Top Overlay and 
+                     Pad C8-1(39.75mm,17.15mm)  Top Layer
+   Violation between Track (32.475mm,25.65mm)(32.475mm,26.85mm)  Top Overlay and 
+                     Pad C10-2(33.375mm,26.25mm)  Top Layer
+   Violation between Track (32.475mm,25.65mm)(32.475mm,26.85mm)  Top Overlay and 
+                     Pad C10-1(31.575mm,26.25mm)  Top Layer
+   Violation between Track (32.475mm,23.35mm)(32.475mm,24.55mm)  Top Overlay and 
+                     Pad C4-2(33.375mm,23.95mm)  Top Layer
+   Violation between Track (32.475mm,23.35mm)(32.475mm,24.55mm)  Top Overlay and 
+                     Pad C4-1(31.575mm,23.95mm)  Top Layer
+   Violation between Track (32.475mm,27.8mm)(32.475mm,29mm)  Top Overlay and 
+                     Pad C11-2(33.375mm,28.4mm)  Top Layer
+   Violation between Track (32.475mm,27.8mm)(32.475mm,29mm)  Top Overlay and 
+                     Pad C11-1(31.575mm,28.4mm)  Top Layer
+   Violation between Track (72.975mm,26.075mm)(72.975mm,27.275mm)  Top Overlay and 
+                     Pad C2-2(72.075mm,26.675mm)  Top Layer
+   Violation between Track (72.975mm,26.075mm)(72.975mm,27.275mm)  Top Overlay and 
+                     Pad C2-1(73.875mm,26.675mm)  Top Layer
+   Violation between Track (32.475mm,32.525mm)(32.475mm,33.725mm)  Top Overlay and 
+                     Pad C6-2(33.375mm,33.125mm)  Top Layer
+   Violation between Track (32.475mm,32.525mm)(32.475mm,33.725mm)  Top Overlay and 
+                     Pad C6-1(31.575mm,33.125mm)  Top Layer
+   Violation between Track (32.45mm,34.825mm)(32.45mm,36.025mm)  Top Overlay and 
+                     Pad R1-2(33.35mm,35.425mm)  Top Layer
+   Violation between Track (32.45mm,34.825mm)(32.45mm,36.025mm)  Top Overlay and 
+                     Pad R1-1(31.55mm,35.425mm)  Top Layer
+   Violation between Track (27mm,42.475mm)(27mm,43.675mm)  Top Overlay and 
+                     Pad C15-2(26.1mm,43.075mm)  Top Layer
+   Violation between Track (27mm,42.475mm)(27mm,43.675mm)  Top Overlay and 
+                     Pad C15-1(27.9mm,43.075mm)  Top Layer
+   Violation between Track (16.7mm,17.45mm)(17.9mm,17.45mm)  Top Overlay and 
+                     Pad R-Pullup-2(17.3mm,16.55mm)  Top Layer
+   Violation between Track (16.7mm,17.45mm)(17.9mm,17.45mm)  Top Overlay and 
+                     Pad R-Pullup-1(17.3mm,18.35mm)  Top Layer
+   Violation between Track (71.75mm,13.875mm)(71.75mm,15.075mm)  Top Overlay and 
+                     Pad C1-2(72.65mm,14.475mm)  Top Layer
+   Violation between Track (71.75mm,13.875mm)(71.75mm,15.075mm)  Top Overlay and 
+                     Pad C1-1(70.85mm,14.475mm)  Top Layer
+   Violation between Track (32.475mm,30.125mm)(32.475mm,31.325mm)  Top Overlay and 
+                     Pad C9-2(31.575mm,30.725mm)  Top Layer
+   Violation between Track (32.475mm,30.125mm)(32.475mm,31.325mm)  Top Overlay and 
+                     Pad C9-1(33.375mm,30.725mm)  Top Layer
+   Violation between Track (58.025mm,33.2mm)(58.025mm,34.4mm)  Top Overlay and 
+                     Pad C13-2(58.925mm,33.8mm)  Top Layer
+   Violation between Track (58.025mm,33.2mm)(58.025mm,34.4mm)  Top Overlay and 
+                     Pad C13-1(57.125mm,33.8mm)  Top Layer
+   Violation between Track (47.875mm,17.95mm)(49.075mm,17.95mm)  Top Overlay and 
+                     Pad C12-2(48.475mm,17.05mm)  Top Layer
+   Violation between Track (47.875mm,17.95mm)(49.075mm,17.95mm)  Top Overlay and 
+                     Pad C12-1(48.475mm,18.85mm)  Top Layer
+   Violation between Track (37.55mm,6.9mm)(37.55mm,8.1mm)  Top Overlay and 
+                     Pad R3-2(38.45mm,7.5mm)  Top Layer
+   Violation between Track (37.55mm,6.9mm)(37.55mm,8.1mm)  Top Overlay and 
+                     Pad R3-1(36.65mm,7.5mm)  Top Layer
+   Violation between Track (26.625mm,4.4mm)(26.625mm,5.6mm)  Top Overlay and 
+                     Pad C16-2(27.525mm,5mm)  Top Layer
+   Violation between Track (26.625mm,4.4mm)(26.625mm,5.6mm)  Top Overlay and 
+                     Pad C16-1(25.725mm,5mm)  Top Layer
+Rule Violations :62
+
+Processing Rule : Silk to Silk (Clearance=0.254mm) (All),(All)
+   Violation between Text "+" (29.967mm,3.456mm)  Top Overlay and 
+                     Track (29.205mm,3.71mm)(34.285mm,3.71mm)  Top Overlay
+   Violation between Text "Gnd" (32.825mm,14.225mm)  Top Overlay and 
+                     Track (29.205mm,13.87mm)(34.285mm,13.87mm)  Top Overlay
+   Violation between Text "Gnd" (32.825mm,14.225mm)  Top Overlay and 
+                     Track (34.285mm,3.71mm)(34.285mm,13.87mm)  Top Overlay
+Rule Violations :3
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Silk primitive without silk layer
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (95mm,14mm)(95mm,26mm)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Text "sd" (-14.846mm,40.119mm)  Top Overlay
+Rule Violations :2
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)
+   Violation between Width Constraint: Arc (90mm,0mm)  Top Layer
+   Violation between Width Constraint: Arc (0mm,0mm)  Top Layer
+   Violation between Width Constraint: Arc (90mm,58mm)  Top Layer
+   Violation between Width Constraint: Arc (0mm,58mm)  Top Layer
+   Violation between Width Constraint: Track (80mm,0mm)(90mm,0mm)  Top Layer
+   Violation between Width Constraint: Track (90mm,10mm)(90mm,0mm)  Top Layer
+   Violation between Width Constraint: Track (0mm,0mm)(10mm,0mm)  Top Layer
+   Violation between Width Constraint: Track (0mm,0mm)(0mm,10mm)  Top Layer
+   Violation between Width Constraint: Track (90mm,48mm)(90mm,58mm)  Top Layer
+   Violation between Width Constraint: Track (80mm,58mm)(90mm,58mm)  Top Layer
+   Violation between Width Constraint: Track (0mm,58mm)(0mm,48mm)  Top Layer
+   Violation between Width Constraint: Track (0mm,58mm)(10mm,58mm)  Top Layer
+Rule Violations :12
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+
+Violations Detected : 303
+Time Elapsed        : 00:00:01

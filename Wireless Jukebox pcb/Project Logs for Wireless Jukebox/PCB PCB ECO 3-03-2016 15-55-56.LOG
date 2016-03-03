@@ -1,0 +1,2 @@
+Added Pin To Net: NetName=SDCLK Pin=sd-5
+Added Pin To Net: NetName=CARDDET Pin=sd-9

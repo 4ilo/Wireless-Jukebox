@@ -104,6 +104,10 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HXLBCSXY
 
+[GeneratedDocument1]
+DocumentPath=Project Outputs for Wireless Jukebox\Design Rule Check - PCB.html
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Default Configuration
 ParameterCount=0
