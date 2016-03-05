@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project>
-	<configuration id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.911941320" name="Debug">
+	<configuration id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.730896493" name="Debug">
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider id="ilg.gnuarmeclipse.managedbuild.cross.GCCBuiltinSpecsDetector">
 				<language id="org.eclipse.cdt.core.gcc">
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/lib/gcc/arm-none-eabi/5.2.1/include">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/lib/gcc/arm-none-eabi/5.2.1/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/lib/gcc/arm-none-eabi/5.2.1/include-fixed">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/lib/gcc/arm-none-eabi/5.2.1/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/arm-none-eabi/include">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
@@ -1092,22 +1092,22 @@
 					</entry>
 				</language>
 				<language id="org.eclipse.cdt.core.g++">
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/arm-none-eabi/include/c++/5.2.1">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/arm-none-eabi/include/c++/5.2.1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/arm-none-eabi/include/c++/5.2.1/arm-none-eabi/armv7e-m">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/arm-none-eabi/include/c++/5.2.1/arm-none-eabi/armv7e-m">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/arm-none-eabi/include/c++/5.2.1/backward">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/arm-none-eabi/include/c++/5.2.1/backward">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/lib/gcc/arm-none-eabi/5.2.1/include">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/lib/gcc/arm-none-eabi/5.2.1/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/lib/gcc/arm-none-eabi/5.2.1/include-fixed">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/lib/gcc/arm-none-eabi/5.2.1/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/arm-none-eabi/include">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
@@ -2266,17 +2266,17 @@
 			</provider>
 		</extension>
 	</configuration>
-	<configuration id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.346884721" name="Release">
+	<configuration id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.1172036877" name="Release">
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider id="ilg.gnuarmeclipse.managedbuild.cross.GCCBuiltinSpecsDetector">
 				<language id="org.eclipse.cdt.core.gcc">
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/lib/gcc/arm-none-eabi/5.2.1/include">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/lib/gcc/arm-none-eabi/5.2.1/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/lib/gcc/arm-none-eabi/5.2.1/include-fixed">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/lib/gcc/arm-none-eabi/5.2.1/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/arm-none-eabi/include">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
@@ -3361,22 +3361,22 @@
 					</entry>
 				</language>
 				<language id="org.eclipse.cdt.core.g++">
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/arm-none-eabi/include/c++/5.2.1">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/arm-none-eabi/include/c++/5.2.1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/arm-none-eabi/include/c++/5.2.1/arm-none-eabi/armv7e-m">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/arm-none-eabi/include/c++/5.2.1/arm-none-eabi/armv7e-m">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/arm-none-eabi/include/c++/5.2.1/backward">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/arm-none-eabi/include/c++/5.2.1/backward">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/lib/gcc/arm-none-eabi/5.2.1/include">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/lib/gcc/arm-none-eabi/5.2.1/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/lib/gcc/arm-none-eabi/5.2.1/include-fixed">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/lib/gcc/arm-none-eabi/5.2.1/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Volumes/Data/Olivier/Stm32 toolchain/gcc-arm-none-eabi-5_2-2015q4/arm-none-eabi/include">
+					<entry kind="includePath" name="/Users/olivier/Stm32 toolchain/gcc-arm/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
