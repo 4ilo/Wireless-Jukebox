@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=SDDAT2 Pin=sd-con-1
+Removed Pin From Net: NetName=SDDAT3 Pin=sd-con-2
+Removed Pin From Net: NetName=SDCMD Pin=sd-con-3
+Removed Pin From Net: NetName=VCC Pin=sd-con-4
+Removed Pin From Net: NetName=SDCLK Pin=sd-con-5
+Removed Pin From Net: NetName=GND Pin=sd-con-6
+Removed Pin From Net: NetName=SDDAT0 Pin=sd-con-7
+Removed Pin From Net: NetName=SDDAT1 Pin=sd-con-8
+Removed Pin From Net: NetName=CARDDET Pin=sd-con-9
+Change Component Designator: OldDesignator=Esp NewDesignator=H1
+Added Component: Designator=sd(Micro-sd-socket)
+Added Pin To Net: NetName=SDDAT2 Pin=sd-1
+Added Pin To Net: NetName=SDDAT3 Pin=sd-2
+Added Pin To Net: NetName=SDCMD Pin=sd-3
+Added Pin To Net: NetName=VCC Pin=sd-4
+Added Pin To Net: NetName=SDCLK Pin=sd-5
+Added Pin To Net: NetName=GND Pin=sd-6
+Added Pin To Net: NetName=SDDAT0 Pin=sd-7
+Added Pin To Net: NetName=SDDAT1 Pin=sd-8
+Added Pin To Net: NetName=CARDDET Pin=sd-9
