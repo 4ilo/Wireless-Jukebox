@@ -1,0 +1,5 @@
+Added Component: Designator=usb(usb B-con)
+Added Pin To Net: NetName=GND Pin=usb-gnd
+Added Pin To Net: NetName=GND Pin=usb-gnd
+Added Pin To Net: NetName=GND Pin=usb-Gnd
+Added Pin To Net: NetName=USB Pin=usb-Vcc

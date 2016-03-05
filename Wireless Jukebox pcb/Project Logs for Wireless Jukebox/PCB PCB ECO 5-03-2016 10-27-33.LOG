@@ -1,0 +1,6 @@
+Removed Member From Class: ClassName=sdio Member=SDCLK
+Removed Member From Class: ClassName=sdio Member=SDDAT0
+Removed Member From Class: ClassName=sdio Member=SDDAT1
+Removed Member From Class: ClassName=sdio Member=SDDAT2
+Removed Member From Class: ClassName=sdio Member=SDDAT3
+Added Class: Name=dac
