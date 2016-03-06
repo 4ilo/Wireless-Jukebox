@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\Olivier\Desktop\Project 2\Wireless Jukebox pcb\PCB.PcbDoc
 Date     : 6/03/2016
-Time     : 12:55:14
+Time     : 15:12:21
 
 Processing Rule : Width Constraint (Min=0.254mm) (Max=1mm) (Preferred=0.35mm) (InNet('USB'))
 Rule Violations :0
@@ -56,4 +56,4 @@ Rule Violations :0
 
 
 Violations Detected : 0
-Time Elapsed        : 00:00:00
+Time Elapsed        : 00:00:01
