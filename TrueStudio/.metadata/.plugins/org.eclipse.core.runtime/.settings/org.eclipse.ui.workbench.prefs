@@ -1,0 +1,7 @@
+ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.cdt.ui.presentation
+ColorsAndFontsPreferencePage.selectedElement=Forg.eclipse.cdt.ui.buildconsole.ConsoleFont
+ENABLED_DECORATORS=com.atollic.truestudio.integration.processorexpert.decorator\:true,org.eclipse.cdt.ui.indexedFiles\:false,org.eclipse.cdt.managedbuilder.ui.excludedFile\:true,org.eclipse.cdt.managedbuilder.ui.includeFolder\:true,org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator\:true,org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator\:true,org.eclipse.mylyn.context.ui.decorator.interest\:true,org.eclipse.mylyn.tasks.ui.decorators.task\:true,org.eclipse.mylyn.team.ui.changeset.decorator\:true,org.eclipse.team.cvs.ui.decorator\:true,org.eclipse.team.svn.ui.decorator.SVNLightweightDecorator\:true,org.eclipse.ui.LinkedResourceDecorator\:true,org.eclipse.ui.SymlinkDecorator\:true,org.eclipse.ui.VirtualResourceDecorator\:true,org.eclipse.ui.ContentTypeDecorator\:true,org.eclipse.ui.ResourceFilterDecorator\:false,
+PLUGINS_NOT_ACTIVATED_ON_STARTUP=it.unibz.instasearch;
+UIActivities.org.eclipse.cdt.debug.dsfgdbActivity=true
+eclipse.preferences.version=1
+org.eclipse.jface.textfont=1|Meslo LG M|14.25|0|WINDOWS|1|-19|0|0|0|400|0|0|0|0|3|2|1|49|Meslo LG M;
