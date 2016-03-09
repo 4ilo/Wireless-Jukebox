@@ -36,6 +36,7 @@
 uint8_t retSD;    /* Return value for SD */
 char SD_Path[4];  /* SD logical drive path */
 extern FATFS SDFatFs;
+extern FIL MyFile;
 
 /* USER CODE BEGIN Variables */
 
@@ -50,15 +51,29 @@ void MX_FATFS_Init(void)
 
   uint8_t result;
 
-  result = f_mount(&SDFatFs, (TCHAR const*)SD_Path, 1);
-
-  if(result != 0)
+  if((result = f_mount(&SDFatFs, (TCHAR const*)SD_Path, 1)) != 0)
   {
 	  HAL_GPIO_WritePin(GPIOD,Led_Red_Pin,GPIO_PIN_SET);
+  }
+  else
+  {
+	  if((result = f_open(&MyFile, "STM32.TXT", FA_CREATE_ALWAYS | FA_WRITE)) != FR_OK)
+	  {
+		  HAL_GPIO_WritePin(GPIOD,Led_Orange_Pin,GPIO_PIN_SET);
+	  }
   }
 
   /* additional user code for init */     
   /* USER CODE END Init */
+}
+
+//
+//	unmount de sd-kaart
+//	Return 0 als sd succesvol is geUnmout. Anders 1.
+//
+uint8_t MX_FatFs_Unmount(void)
+{
+	return FATFS_UnLinkDriver(SD_Path);
 }
 
 /**

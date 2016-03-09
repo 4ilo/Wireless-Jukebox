@@ -113,12 +113,6 @@ int main(void)
 	  else
 	  {
 		  f_close(&MyFile);
-
-		  if(byteswritten == bytesread)
-		  {
-			  HAL_GPIO_WritePin(GPIOD,Led_Green_Pin,GPIO_PIN_SET);
-
-		  }
 	  }
 
   }

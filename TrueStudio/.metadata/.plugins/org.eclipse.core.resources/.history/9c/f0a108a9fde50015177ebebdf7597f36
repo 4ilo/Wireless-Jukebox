@@ -92,42 +92,10 @@ int main(void)
   char rtext[100];
 
   res = f_write(&MyFile, wtext, sizeof(wtext), (void *)&byteswritten);
+
   if((byteswritten == 0) || res != FR_OK)
   {
 	  HAL_GPIO_WritePin(GPIOD,Led_Blue_Pin,GPIO_PIN_SET);
-  }
-  f_close(&MyFile);
-
-  if (f_open(&MyFile, "STM32.TXT", FA_READ) != FR_OK)
-  {
-	  HAL_GPIO_WritePin(GPIOD,Led_Orange_Pin,GPIO_PIN_SET);
-  }
-  else
-  {
-	  res = f_read(&MyFile, rtext, sizeof(rtext), (UINT*)&bytesread);
-
-	  if((bytesread == 0) || (res != FR_OK))
-	  {
-		  HAL_GPIO_WritePin(GPIOD,Led_Red_Pin,GPIO_PIN_SET);
-	  }
-	  else
-	  {
-		  f_close(&MyFile);
-
-		  if(byteswritten == bytesread)
-		  {
-			  HAL_GPIO_WritePin(GPIOD,Led_Green_Pin,GPIO_PIN_SET);
-
-		  }
-	  }
-
-  }
-
-
-
-  if(MX_FatFs_Unmount() != 0)
-  {
-	  HAL_GPIO_WritePin(GPIOD,Led_Red_Pin,GPIO_PIN_SET);
   }
 
   /* USER CODE END 2 */
