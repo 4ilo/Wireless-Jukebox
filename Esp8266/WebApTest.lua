@@ -12,8 +12,8 @@ print("Ready to start soft ap AND station")
      cfg.gateway="192.168.2.1";
      wifi.ap.setip(cfg);
      
-     wifi.sta.config("Van den Eede","a123456789")       -- verbinding met router maken
-     wifi.sta.connect()
+      wifi.sta.config("Van den Eede","a123456789")       -- verbinding met router maken
+      wifi.sta.connect()
      
      local cnt = 0
      gpio.mode(0,gpio.OUTPUT);
