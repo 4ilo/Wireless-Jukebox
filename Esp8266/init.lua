@@ -28,9 +28,20 @@ srv:listen(80,function(conn)
             end
         end
         
-        --buf = buf.. webpagina;
-        local webpagina = "<!DOCTYPE html><html><head><title>TestPagina</title></head><body><h1>Wireless Jukebox</h1><div><ul><li>Liedje 1</li><li>Liedje 2</li><li>Liedje 3</li><li>Liedje 4</li></ul></div></body></html>";
-        client:send(webpagina);
+        -- We openen de file en sturen het lijn per lijn naar de client
+        file.open('webpagina.html','r');
+
+        print("start lezen file");
+        
+        local line;
+        line = file.readline();
+        while (line) do
+            client:send(line);
+            line = file.readline();
+        end
+        
+        file.close();
+        
         client:close();
         collectgarbage();
     end)
