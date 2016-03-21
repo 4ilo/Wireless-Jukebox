@@ -1,6 +1,4 @@
 print("Wireless jukebox-esp V1.0")
-    
-     json = require "cjson"
 
      local str=wifi.ap.getmac();
      wifi.setmode(wifi.STATIONAP)       -- instellen als acces point en wifi zoeken
@@ -31,8 +29,6 @@ print("Wireless jukebox-esp V1.0")
         end
     end
 
-
-
 -- De globale variabelen om het aantal stemmen bij te houden
 song1 = 0
 song2 = 0
@@ -45,7 +41,6 @@ songTitle3 = "Perfect - One Direction"
 songTitle4 = "Sorry - Justin Bieber"
 
 -- Een functie die bijhoud hoeveel er op elk liedje gestemd wordt
-
 function count( vote )
     if(vote == '1') then
         song1 = song1 + 1;
@@ -66,6 +61,7 @@ function printSongs()
     print("Song4:" .. song4)
 end
 
+-- Een functie die in het html bestand zoekt naar de plaats om de titels in te vullen
 function checkIfSongTitle( line )
     if (line:find("##SONG1##") ~= nil) then
         line = songTitle1
@@ -76,12 +72,10 @@ function checkIfSongTitle( line )
     elseif (line:find("##SONG4##") ~= nil) then
         line = songTitle4
     end
-
     return line;
-
 end
     
-
+-- We starten de server op op poort 80
 srv=net.createServer(net.TCP)
 srv:listen(80,function(conn)
     conn:on("receive", function(client,request)
@@ -96,14 +90,16 @@ srv:listen(80,function(conn)
                 _GET[k] = v
             end
         end
+
+        -- We sturen sowiso de http header
+        conn:send("HTTP/1.0 200 OK\n")
+        conn:send("Server: ESP (nodeMCU)\n")
+        conn:send("Content-Length: 1\n\n")
         
         -- Eerst kijken we of er een get request is om titels op te vragen
         if(_GET.titels) then
-
-            conn:send("HTTP/1.0 200 OK\n")
-            conn:send("Server: ESP (nodeMCU)\n")
-            conn:send("Content-Type: application/json")
-            conn:send("Content-Length: 1\n\n")
+            
+            conn:send("Content-Type: application/json")		-- Het is een json response
             
             client:send('[');
             client:send('{ "Titel" : "test' .. songTitle1 .. ' "},');
@@ -111,15 +107,7 @@ srv:listen(80,function(conn)
             client:send('{ "Titel" : "' .. songTitle3 .. ' "},');
             client:send('{ "Titel" : "' .. songTitle4 .. ' "}' );
             client:send(']');
- 
-            --local superHeroes = {
-            --    { name="Clark Kent", nickname="Superman", address="Metropolis", age=32 },
-            --    { name="Bruce Wayne", nickname="Batman", address="Gotham", age=36 },
-            --    { name="Diana Prince", nickname="Wonder Woman", address="New York", age=28 }
-            --    }
-            --    conn:send(json.encode(superHeroes))
 
-            --conn:send("a")
         else
             -- We openen de file en sturen het lijn per lijn naar de client
             file.open('webpagina.html','r');
@@ -129,9 +117,10 @@ srv:listen(80,function(conn)
                 client:send(line);                  --  en vervanen als het nodig is
                 line = file.readline();
             end
+
             file.close();
 
-            count(_GET.next);
+            count(_GET.next);		-- We tellen het aantal stemmen
             printSongs();
 
         end

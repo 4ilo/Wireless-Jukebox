@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Wireless Jukebox/ViewController.swift"
+            timestampString = "480269480.597144"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Wireless Jukebox/ViewController.swift"
+            timestampString = "480277495.818098"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Wireless_Jukebox.ViewController.ipAdress.getter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
+                  moduleName = "Wireless Jukebox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Data/Olivier/Code/Programmeren/Wireless%20Jukebox/Wireless%20Jukebox/ViewController.swift"
+                  timestampString = "480277495.824664"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Wireless_Jukebox.ViewController.ipAdress.setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
+                  moduleName = "Wireless Jukebox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Data/Olivier/Code/Programmeren/Wireless%20Jukebox/Wireless%20Jukebox/ViewController.swift"
+                  timestampString = "480277495.825008"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Wireless_Jukebox.ViewController.ipAdress.materializeForSet : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
+                  moduleName = "Wireless Jukebox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Data/Olivier/Code/Programmeren/Wireless%20Jukebox/Wireless%20Jukebox/ViewController.swift"
+                  timestampString = "480277495.825216"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Wireless_Jukebox.ViewController.init (Wireless_Jukebox.ViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Wireless_Jukebox.ViewController"
+                  moduleName = "Wireless Jukebox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Data/Olivier/Code/Programmeren/Wireless%20Jukebox/Wireless%20Jukebox/ViewController.swift"
+                  timestampString = "480277495.825442"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Wireless_Jukebox.ViewController.init (Wireless_Jukebox.ViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Wireless_Jukebox.ViewController&gt;"
+                  moduleName = "Wireless Jukebox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Data/Olivier/Code/Programmeren/Wireless%20Jukebox/Wireless%20Jukebox/ViewController.swift"
+                  timestampString = "480277495.825951"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "146">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

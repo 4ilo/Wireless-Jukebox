@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Wireless_Jukebox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Wireless Jukebox" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9Z-rq-1Az">
+                                <rect key="frame" x="196" y="28" width="209" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Wat wordt het volgende liedje?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWe-bA-kGt">
+                                <rect key="frame" x="183" y="57" width="235" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5T-oU-YKy">
+                                <rect key="frame" x="277" y="194" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="songPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cWz-Tf-Lhl"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIn-sX-BgP">
+                                <rect key="frame" x="277" y="253" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="songPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tnx-Qs-8mR"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxG-oL-epG">
+                                <rect key="frame" x="277" y="315" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="songPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mn4-2E-euz"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xry-JB-VB9">
+                                <rect key="frame" x="277" y="376" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="songPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AA5-Od-h65"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="192.168.0.199" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MXQ-PS-NRA">
+                                <rect key="frame" x="246" y="133" width="109" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbg-mK-4hQ">
+                                <rect key="frame" x="274" y="467" width="53" height="30"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hX-Ik-d4k"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Server:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuX-06-fmY">
+                                <rect key="frame" x="272" y="104" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Server niet gevonden!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puH-6l-4ov">
+                                <rect key="frame" x="213" y="289" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sbg-mK-4hQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BOz-Gg-Ou8"/>
+                            <constraint firstItem="Xry-JB-VB9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dae-yn-LIc"/>
+                            <constraint firstItem="H5T-oU-YKy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J0d-El-Dcy"/>
+                            <constraint firstItem="MxG-oL-epG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jle-2b-smL"/>
+                            <constraint firstItem="iWe-bA-kGt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MI4-pW-ut3"/>
+                            <constraint firstItem="MXQ-PS-NRA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PWq-hU-1F1"/>
+                            <constraint firstItem="i9Z-rq-1Az" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VKB-qL-GDg"/>
+                            <constraint firstItem="PIn-sX-BgP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bxI-hs-pKm"/>
+                            <constraint firstItem="JuX-06-fmY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gga-IR-Iz8"/>
+                            <constraint firstItem="puH-6l-4ov" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nM6-tY-bG3"/>
+                            <constraint firstItem="puH-6l-4ov" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xnZ-eV-wcs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ipAdress" destination="MXQ-PS-NRA" id="pdS-1y-76L"/>
+                        <outlet property="message" destination="puH-6l-4ov" id="AYK-J6-opT"/>
+                        <outlet property="song1Button" destination="H5T-oU-YKy" id="2Gs-dQ-41Q"/>
+                        <outlet property="song2Button" destination="PIn-sX-BgP" id="6FA-xA-w1p"/>
+                        <outlet property="song3Button" destination="MxG-oL-epG" id="N4e-R2-fRf"/>
+                        <outlet property="song4Button" destination="Xry-JB-VB9" id="eI7-lQ-H9Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="300"/>
+        </scene>
+    </scenes>
+</document>
