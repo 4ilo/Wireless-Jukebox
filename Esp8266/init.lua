@@ -95,19 +95,19 @@ function checkIfSongTitle( line )
 end
 
 local str=wifi.ap.getmac();
-wifi.setmode(wifi.SOFTAP)       -- instellen als acces point en wifi zoeken
---wifi.setmode(wifi.STATION)
---wifi.sta.config("Van den Eede","a123456789")
+--wifi.setmode(wifi.SOFTAP)       -- instellen als acces point en wifi zoeken
+wifi.setmode(wifi.STATION)
+wifi.sta.config("Van den Eede","a123456789")
      
-local cfg={}
-cfg.ssid="Wireless jukebox";            -- De acces point instellingen
-cfg.pwd="12345678"
-wifi.ap.config(cfg)
-cfg={}
-cfg.ip="192.168.2.1";
-cfg.netmask="255.255.255.0";
-cfg.gateway="192.168.2.1";
-wifi.ap.setip(cfg);
+-- local cfg={}
+-- cfg.ssid="Wireless jukebox";            -- De acces point instellingen
+-- cfg.pwd="12345678"
+-- wifi.ap.config(cfg)
+-- cfg={}
+-- cfg.ip="192.168.2.1";
+-- cfg.netmask="255.255.255.0";
+-- cfg.gateway="192.168.2.1";
+-- wifi.ap.setip(cfg);
 
 uart.setup(0,9600,8,0,1)      -- We initialiseren de uart voor communicatie
      --uart.write(0,"Wireless jukebox webserver V1.0\n")
@@ -127,28 +127,9 @@ srv:listen(80,function(conn)
             end
         end
         
+            count(_GET.next)        -- We tellen het aantal stemmen
 
-        -- Eerst kijken we of er een get request is om titels op te vragen
-        if(_GET.titels) then
-
-            conn:send("HTTP/1.0 200 OK\n")
-            --conn:send("Server: ESP (Wireless jukebox)\n")
-            --conn:send("Content-Type: application/json")
-            --conn:send("Content-Length: 1\n\n")
-            
-            -- client:send('[');
-            -- client:send('{ "Titel" : "' .. songTitle1 .. ' ", "Stemmen" : "' .. song1 .. '"},')
-            -- client:send('{ "Titel" : "' .. songTitle2 .. ' ", "Stemmen" : "' .. song2 .. '"},')
-            -- client:send('{ "Titel" : "' .. songTitle3 .. ' ", "Stemmen" : "' .. song3 .. '"},')
-            -- client:send('{ "Titel" : "' .. songTitle4 .. ' ", "Stemmen" : "' .. song4 .. '"}' )
-            -- client:send(']')
-
-        else
-            -- We openen de file en sturen het lijn per lijn naar de client
-            conn:send("HTTP/1.1 200 OK\n")
-            conn:send("Server: ESP (Wireless jukebox)\n")
-            
-            file.open('webpagina.html','r')
+            file.open('webpaginaOnline.html','r')
             local line = file.readline()
             while (line) do
                 line = checkIfSongTitle(line)      -- We kijken of er een titel moet komen, 
@@ -156,10 +137,7 @@ srv:listen(80,function(conn)
                 line = file.readline()
             end
             file.close()
-            count(_GET.next)		-- We tellen het aantal stemmen
             printSongs()
-        end
-        --client:on("sent", function(client) client:close() end)
         client:close();
         collectgarbage();
     end)
