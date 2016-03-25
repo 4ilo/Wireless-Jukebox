@@ -72,13 +72,6 @@ function count( vote )
     end
 end
 
--- Een tijdelijke functie om status te tonen
-function printSongs()
-    print("Song1:" .. song1)
-    print("Song2:" .. song2)
-    print("Song3:" .. song3)
-    print("Song4:" .. song4)
-end
 
 -- Een functie die in het html bestand zoekt naar de plaats om de titels in te vullen
 function checkIfSongTitle( line )
@@ -109,7 +102,7 @@ wifi.sta.config("Van den Eede","a123456789")
 -- cfg.gateway="192.168.2.1";
 -- wifi.ap.setip(cfg);
 
-uart.setup(0,9600,8,0,1)      -- We initialiseren de uart voor communicatie
+uart.setup(0,9600,8,0,1,0)      -- We initialiseren de uart voor communicatie
      --uart.write(0,"Wireless jukebox webserver V1.0\n")
     
 -- We starten de server op op poort 80
@@ -137,7 +130,6 @@ srv:listen(80,function(conn)
                 line = file.readline()
             end
             file.close()
-            printSongs()
         client:close();
         collectgarbage();
     end)
