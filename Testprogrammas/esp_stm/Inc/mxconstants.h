@@ -38,6 +38,8 @@
 
 /* Private define ------------------------------------------------------------*/
 
+#define Knop_Pin GPIO_PIN_0
+#define Knop_GPIO_Port GPIOA
 #define Pc_Tx_Pin GPIO_PIN_2
 #define Pc_Tx_GPIO_Port GPIOA
 #define Pc_Rx_Pin GPIO_PIN_3

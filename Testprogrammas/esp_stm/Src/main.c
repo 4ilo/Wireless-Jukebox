@@ -32,9 +32,11 @@
   */
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
-#include "olivier.h"
 
 /* USER CODE BEGIN Includes */
+
+#include "olivier.h"
+#include <string.h>
 
 /* USER CODE END Includes */
 
@@ -86,6 +88,8 @@ int main(void)
 
   sendWelkom();
 
+  HAL_Delay(500);
+
   const char *liedjes[4];
   liedjes[0] = "Missing - Exd";
   liedjes[1] = "Lean on - Majer Lazer";
@@ -97,10 +101,7 @@ int main(void)
   setSong(3,liedjes[2]);
   setSong(4,liedjes[3]);
 
-  char buffer[10];
-  sprintf(buffer,"%c\n",getBest());
-
-  HAL_UART_Transmit(&huart2,buffer,strlen(buffer),10);
+  char buffer[100];
 
   /* USER CODE END 2 */
 
@@ -111,6 +112,13 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
+
+	  if(HAL_GPIO_ReadPin(GPIOA,Knop_Pin))
+	  {
+		  sprintf(buffer,"Meest gestemd: %d\n",getBest());
+		  HAL_UART_Transmit(&huart2,(uint8_t*)buffer,strlen(buffer),10);
+	  }
+	  HAL_Delay(100);
 
   }
   /* USER CODE END 3 */
@@ -205,8 +213,11 @@ void MX_GPIO_Init(void)
   __GPIOD_CLK_ENABLE();
   __GPIOC_CLK_ENABLE();
 
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOD, Led3_Pin|Led3D13_Pin|Led2_Pin|Led1_Pin, GPIO_PIN_RESET);
+  /*Configure GPIO pin : Knop_Pin */
+  GPIO_InitStruct.Pin = Knop_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(Knop_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : Led3_Pin Led3D13_Pin Led2_Pin Led1_Pin */
   GPIO_InitStruct.Pin = Led3_Pin|Led3D13_Pin|Led2_Pin|Led1_Pin;
@@ -214,6 +225,9 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_LOW;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOD, Led3_Pin|Led3D13_Pin|Led2_Pin|Led1_Pin, GPIO_PIN_RESET);
 
 }
 
