@@ -6,10 +6,10 @@ song2 = 0
 song3 = 0
 song4 = 0
 
-songTitle1 = "Missing - Exd"
-songTitle2 = "Lean on - Majer Lazer"
-songTitle3 = "The Hills - The Weekend"
-songTitle4 = "Faded - Alan Walker"
+songTitle1 = ""
+songTitle2 = ""
+songTitle3 = ""
+songTitle4 = ""
 
 -- Deze functie zet de juiste liedjes in de variabelen
 function setSong(nr, titel)
@@ -126,7 +126,7 @@ srv:listen(80,function(conn)
                 _GET[k] = v
             end
         end
-        
+            
             count(_GET.next)        -- We tellen het aantal stemmen
 
             file.open('webpaginaOnline.html','r')
