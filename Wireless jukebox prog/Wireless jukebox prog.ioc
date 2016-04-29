@@ -1,4 +1,6 @@
 #MicroXplorer Configuration settings - do not modify
+FATFS.IPParameters=_USE_LFN
+FATFS._USE_LFN=0
 File.Version=6
 KeepUserPlacement=false
 Mcu.Family=STM32F4

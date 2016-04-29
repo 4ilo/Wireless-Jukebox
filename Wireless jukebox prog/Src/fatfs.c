@@ -113,7 +113,7 @@ FRESULT scan_files(char * path)
   char * fileName;
   char buffer[20];
 
-  //char bestanden[100][20];    // Array om alle bestandsnamen op te slaan
+  char bestanden[100][20];    // Array om alle bestandsnamen op te slaan
 
   if((res = f_opendir(&dir, path)) == FR_OK)  // de directory openen op de schijf
   {
@@ -123,6 +123,7 @@ FRESULT scan_files(char * path)
       if((res != FR_OK) || (fileInfo.fname[0] == 0))
       {
         //bestanden[teller] = 0;
+    	  strcpy(bestanden[teller],"0");
         break;          // break op einde
       }
       if(fileInfo.fname[0] == '.') continue;            // Een punt negeren
@@ -131,18 +132,27 @@ FRESULT scan_files(char * path)
 
       if(!(fileInfo.fattrib & AM_DIR))      // Kijken of het een bestand is(geen map)
       {
-        //strcpy(bestanden[teller],fileName);
-        sprintf(buffer,"%s\n",fileName);
-        HAL_UART_Transmit(&huart2,(uint8_t*)buffer,strlen(buffer),10);
+        strcpy(bestanden[teller],fileName);
+        //sprintf(buffer,"%s\n",fileName);
+        //HAL_UART_Transmit(&huart2,(uint8_t*)buffer,strlen(buffer),10);
         teller ++;
       }
       else    // Hier is het een map
       {
-        sprintf(buffer,"/%s\n",fileName);
-        HAL_UART_Transmit(&huart2,(uint8_t*)buffer,strlen(buffer),10);
+        //sprintf(buffer,"/%s\n",fileName);
+        //HAL_UART_Transmit(&huart2,(uint8_t*)buffer,strlen(buffer),10);
       }
 
     }
+  }
+
+  teller = 0;
+
+  while(strcmp(bestanden[teller],"0") != 0)
+  {
+	  sprintf(buffer,"%s\n",bestanden[teller]);
+	  HAL_UART_Transmit(&huart2,(uint8_t*)buffer,strlen(buffer),10);
+	  teller++;
   }
 
   return res;
