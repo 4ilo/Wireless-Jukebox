@@ -1,14 +1,10 @@
 /**
   ******************************************************************************
-  * @file    stm32f4xx_hal_flash_ramfunc.h
-  * @author  MCD Application Team
-  * @version V1.4.4
-  * @date    22-January-2016
-  * @brief   Header file of FLASH RAMFUNC driver.
+  * @file   fatfs.h
+  * @brief  Header for fatfs applications
   ******************************************************************************
-  * @attention
   *
-  * <h2><center>&copy; COPYRIGHT(c) 2016 STMicroelectronics</center></h2>
+  * COPYRIGHT(c) 2016 STMicroelectronics
   *
   * Redistribution and use in source and binary forms, with or without modification,
   * are permitted provided that the following conditions are met:
@@ -33,64 +29,43 @@
   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   *
   ******************************************************************************
-  */ 
+  */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __STM32F4xx_FLASH_RAMFUNC_H
-#define __STM32F4xx_FLASH_RAMFUNC_H
-
+#ifndef __fatfs_H
+#define __fatfs_H
 #ifdef __cplusplus
  extern "C" {
 #endif
-#if defined(STM32F410Tx) || defined(STM32F410Cx) || defined(STM32F410Rx) || defined(STM32F411xE) || defined(STM32F446xx)  
 
-/* Includes ------------------------------------------------------------------*/
-#include "stm32f4xx_hal_def.h"
+#include "ff.h"
+#include "ff_gen_drv.h"
+#include "sd_diskio.h" /* defines SD_Driver as external */
 
-/** @addtogroup STM32F4xx_HAL_Driver
-  * @{
-  */
+/* USER CODE BEGIN Includes */
 
-/** @addtogroup FLASH_RAMFUNC
-  * @{
-  */
+#include <string.h>
 
-/* Exported types ------------------------------------------------------------*/
-/* Exported macro ------------------------------------------------------------*/
-/* Exported functions --------------------------------------------------------*/
-/** @addtogroup FLASH_RAMFUNC_Exported_Functions
-  * @{
-  */
+/* USER CODE END Includes */
 
-/** @addtogroup FLASH_RAMFUNC_Exported_Functions_Group1
-  * @{
-  */   
-__RAM_FUNC HAL_FLASHEx_StopFlashInterfaceClk(void);
-__RAM_FUNC HAL_FLASHEx_StartFlashInterfaceClk(void);
-__RAM_FUNC HAL_FLASHEx_EnableFlashSleepMode(void);
-__RAM_FUNC HAL_FLASHEx_DisableFlashSleepMode(void);
-/**
-  * @}
-  */ 
+extern uint8_t retSD; /* Return value for SD */
+extern char SD_Path[4]; /* SD logical drive path */
 
-/**
-  * @}
-  */
+void MX_FATFS_Init(void);
 
-/**
-  * @}
-  */ 
+/* USER CODE BEGIN Prototypes */
 
-/**
-  * @}
-  */
+extern UART_HandleTypeDef huart2;           // De uart typedef in de main
 
-#endif /* STM32F410xx || STM32F411xE || STM32F446xx */
+void errorHandler(char * buffer, uint8_t len);
+uint8_t MX_FatFs_Unmount(void);
+FRESULT scan_files(char * path);
+void probeer(FRESULT status, char * message);
+
+/* USER CODE END Prototypes */
 #ifdef __cplusplus
 }
 #endif
-
-
-#endif /* __STM32F4xx_FLASH_RAMFUNC_H */
+#endif /*__fatfs_H */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

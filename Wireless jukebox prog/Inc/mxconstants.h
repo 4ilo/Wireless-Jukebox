@@ -54,6 +54,8 @@
 #define SD_CARD_det_GPIO_Port GPIOC
 #define Esp_Rx_Pin GPIO_PIN_10
 #define Esp_Rx_GPIO_Port GPIOA
+#define Esp_Tx_Pin GPIO_PIN_15
+#define Esp_Tx_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

@@ -77,18 +77,18 @@ DWORD get_fattime(void)
 
 /* USER CODE BEGIN Application */
 
+
 //
 //	Handelen van de error
 // 	We sturen een boodschap over de uart en toggelen een rood lampje aan
 //
 void errorHandler(char * buffer, uint8_t len)
 {
-	HAL_UART_Transmit(&huart6,(uint8_t*)buffer,len,10);
-
 	while(1)
 	{
-		HAL_GPIO_TogglePin(GPIOD,Led_Red_Pin);
-		HAL_Delay(500);
+    // Hier zitten we vast
+		HAL_Delay(1000);
+    HAL_UART_Transmit(&huart6,(uint8_t*)buffer,len,10);
 	}
 }
 

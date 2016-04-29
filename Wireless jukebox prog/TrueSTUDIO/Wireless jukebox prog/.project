@@ -224,5 +224,41 @@
 			<name>Application</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
+		</link><link>
+			<name>Middlewares/FatFs</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link><link>
+			<name>Middlewares</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link><link>
+			<name>Application/User/fatfs.c</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Src/fatfs.c</locationURI>
+		</link><link>
+			<name>Middlewares/FatFs/syscall.c</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Middlewares/Third_Party/FatFs/src/option/syscall.c</locationURI>
+		</link><link>
+			<name>Middlewares/FatFs/ff_gen_drv.c</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c</locationURI>
+		</link><link>
+			<name>Middlewares/FatFs/diskio.c</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Middlewares/Third_Party/FatFs/src/diskio.c</locationURI>
+		</link><link>
+			<name>Application/User/bsp_driver_sd.c</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Src/bsp_driver_sd.c</locationURI>
+		</link><link>
+			<name>Middlewares/FatFs/ff.c</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Middlewares/Third_Party/FatFs/src/ff.c</locationURI>
+		</link><link>
+			<name>Middlewares/FatFs/sd_diskio.c</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c</locationURI>
 		</link></linkedResources>
 </projectDescription>

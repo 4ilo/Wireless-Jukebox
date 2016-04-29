@@ -250,6 +250,9 @@ void probeer(FRESULT status, char * message)
 }
 
 
+//
+//  De filestructuur van de sd kaart opvragen
+//
 FRESULT scan_files(char * path)
 {
 	FRESULT res;
