@@ -61,9 +61,9 @@ UART_HandleTypeDef huart2;
 /* Private variables ---------------------------------------------------------*/
 
 // Deze variabelen zijn de buffers voor de wav file
-char wavBuffer0[512],wavBuffer1[512];
-uint8_t wavBufferSelect = 0;
-uint8_t bufferEnd,songEnd = 0;
+volatile char wavBuffer0[512],wavBuffer1[512];
+volatile uint8_t wavBufferSelect = 0;
+volatile uint8_t bufferEnd,songEnd = 0;
 
 // Var voor het fatfs filesystem
 FATFS SDFatFs;
@@ -188,7 +188,6 @@ int main(void)
 
 	  if(bufferEnd == 1)
 	  {
-		  HAL_UART_Transmit(&huart2,"bufferend",9,10);
 		  if(songEnd == 1)			// Als liedje gedaan is, gaan we de timer stoppen
 		  {
 			  HAL_TIM_Base_Stop_IT(&htim3);
@@ -204,7 +203,6 @@ int main(void)
 		  else
 		  {
 			  if(getData(&MyFile,wavBuffer0,512) == 1 ) songEnd = 1;
-			  HAL_UART_Transmit(&huart2,"data",4,10);
 		  }
 
 	  }
