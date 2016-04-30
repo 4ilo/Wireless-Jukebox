@@ -36,6 +36,11 @@
 
 /* USER CODE BEGIN Includes */
 
+#include <string.h>
+#include <stdlib.h>
+
+#include "wav.h"
+
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -141,29 +146,9 @@ int main(void)
   //HAL_TIM_Base_Start_IT(&htim3);
   //HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_3);
 
-
-  uint32_t bytesread;
-  char rtext[100];
-
-  // We gaan de file lezen
-  //probeer(f_open(&MyFile, "random.txt", FA_READ),"open random.txt");
-  //probeer(f_read(&MyFile, rtext, sizeof(rtext), (uint*)&bytesread),"read random.text");
-  //f_close(&MyFile);
-
-  // Nu sturen we de gelezen data over de uart
-  //HAL_UART_Transmit(&huart2,(uint8_t*)rtext,strlen(rtext),10);
-
-
-  probeer(f_open(&MyFile, "titels.txt",FA_READ),"open titels.txt");
-  f_gets(rtext, sizeof(rtext),&MyFile);
-
-  HAL_UART_Transmit(&huart2,(uint8_t*)rtext,strlen(rtext),10);
-
-
-  HAL_UART_Transmit(&huart2,"\nBestanden en mappen op sd:\n",28,10);
-
-  // We kijken naar alle files die zich op de sd bevinden
-  //scan_files("/");
+  // We halen alle titels op vanaf de sd-kaart en slagen deze op in een array
+  char * titels[10];
+  uint8_t aantal = getTitels(&MyFile,titels,10);
 
   // Sd kaart unmounten
   if(MX_FatFs_Unmount() != 0)

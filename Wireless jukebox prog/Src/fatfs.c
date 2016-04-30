@@ -83,12 +83,13 @@ DWORD get_fattime(void)
 //
 void errorHandler(char * buffer, uint8_t len)
 {
-  while(1)
-  {
-    // Hier zitten we vast
-    HAL_Delay(1000);
-    HAL_UART_Transmit(&huart2,(uint8_t*)buffer,len,10);
-  }
+	MX_FatFs_Unmount();
+	while(1)
+	{
+		// Hier zitten we vast
+		HAL_Delay(3000);
+		HAL_UART_Transmit(&huart2,(uint8_t*)buffer,len,10);
+	}
 }
 
 //
