@@ -90,7 +90,7 @@ end
 local str=wifi.ap.getmac();
 --wifi.setmode(wifi.SOFTAP)       -- instellen als acces point en wifi zoeken
 wifi.setmode(wifi.STATION)
-wifi.sta.config("Van den Eede","a123456789")
+wifi.sta.config("Wireless jukebox","12345678")
      
 -- local cfg={}
 -- cfg.ssid="Wireless jukebox";            -- De acces point instellingen

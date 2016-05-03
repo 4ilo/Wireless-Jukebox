@@ -36,6 +36,10 @@
 
 /* USER CODE BEGIN Includes */
 
+#include <string.h>
+#include "wav.h"
+#include "esp.h"
+
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -62,7 +66,6 @@ volatile uint8_t bufferEnd,songEnd = 0;
 
 // Var voor het fatfs filesystem
 FATFS SDFatFs;
-FIL MyFile;
 
 /* USER CODE END PV */
 
@@ -99,11 +102,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   {
     if(wavBufferSelect == 0)  // Kijken uit welke buffer we moeten lezen
     {
-      __HAL_TIM_SET_COMPARE(&htim4,TIM_CHANNEL_3, wavBuffer0[teller]);
+      __HAL_TIM_SET_COMPARE(&htim4,TIM_CHANNEL_3, (wavBuffer0[teller] + 100));
     }
     else
     {
-      __HAL_TIM_SET_COMPARE(&htim4,TIM_CHANNEL_3, wavBuffer1[teller]);
+      __HAL_TIM_SET_COMPARE(&htim4,TIM_CHANNEL_3, (wavBuffer1[teller] + 100));
     }
     teller++;
 
@@ -114,8 +117,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
       teller = 0;
     }
   }
-
-
 }
 
 /* USER CODE END 0 */
@@ -148,12 +149,16 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
 
+  // De variabele waar de file inzit
+   FIL MyFile;
+
+
   HAL_UART_Transmit(&huart2,"Wireless jukebox V1.0",21,10);
 
   // We halen alle titels op vanaf de sd-kaart en slagen deze op in een array
   char * titels[10];
   uint8_t aantal = getTitels(&MyFile,titels,10);
-  uint8_t teller = 0;
+
 
   // We gaan nu de eerste wav buffer vullen, hiervoor pakken we steeds nummer 0
   probeer(f_open(&MyFile,"0.wav",FA_READ),"openen file 0.wav");
@@ -162,14 +167,24 @@ int main(void)
   //f_close(&MyFile);
 
   // Timer3 en pwm output starten
-  HAL_TIM_Base_Start_IT(&htim3);
-  HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_3);
+  startPwm();
 
-//  // Sd kaart unmounten
-//  if(MX_FatFs_Unmount() != 0)
-//  {
-//    //HAL_GPIO_WritePin(GPIOD,Led_Red_Pin,GPIO_PIN_SET);
-//  }
+  // We zetten de eerste titels op de esp
+  uint8_t teller;
+  HAL_Delay(5000);
+
+  for(teller = 0; teller<2; teller++)
+  {
+    setSong(1,titels[0]);
+    setSong(2,titels[1]);
+    setSong(3,titels[2]);
+    setSong(4,titels[3]);
+    HAL_Delay(100);
+  }
+  
+  uint8_t volgendLiedId = 0;
+  char buffer[100];
+  char openSongString[6];
 
   /* USER CODE END 2 */
 
@@ -181,14 +196,33 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 
+    if((songEnd == 1) && (bufferEnd == 1))  // als liedje gedaan is
+    {
+      // We stoppen de pwm
+      stopPwm();    
+
+      // We sluiten de file
+      f_close(&MyFile);
+
+      volgendLiedId = getBest() - 1 ;    // Id van het volgend liedje ophalen
+      sprintf(buffer,"beste id: %d",volgendLiedId);
+      HAL_UART_Transmit(&huart2,buffer,strlen(buffer),10);
+      sprintf(openSongString,"%d.wav",volgendLiedId);
+
+      // We openen de nieuwe file
+      probeer(f_open(&MyFile,openSongString,FA_READ),"open nieuw liedje");
+      //probeer(f_open(&MyFile,"2.wav",FA_READ),"open nieuw liedje");
+      HAL_UART_Transmit(&huart2,"nieuw liedje is geladen.",24,10);
+      getData(&MyFile,wavBuffer0,512);
+      wavBufferSelect = 0;
+      bufferEnd = 0;
+      songEnd = 0;
+
+      startPwm();
+    }
     
     if(bufferEnd == 1)
     {
-      if(songEnd == 1)      // Als liedje gedaan is, gaan we de timer stoppen
-      {
-        HAL_TIM_Base_Stop_IT(&htim3);
-        HAL_TIM_PWM_Stop(&htim4,TIM_CHANNEL_3);
-      }
       bufferEnd = 0;
       if(wavBufferSelect == 0)    // Kijken in welke buffer de interupt aan het lezen is
       {
@@ -202,7 +236,6 @@ int main(void)
       }
 
     }
-
   }
   /* USER CODE END 3 */
 
@@ -331,7 +364,7 @@ void MX_TIM4_Init(void)
   htim4.Instance = TIM4;
   htim4.Init.Prescaler = 0;
   htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim4.Init.Period = 256;
+  htim4.Init.Period = 456;
   htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   HAL_TIM_Base_Init(&htim4);
 
@@ -359,7 +392,7 @@ void MX_USART1_UART_Init(void)
 {
 
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 115200;
+  huart1.Init.BaudRate = 9600;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;

@@ -75,3 +75,21 @@ uint8_t getData(FIL * fp, char data[],int aantal)
     }
     return 1;
 }
+
+//
+//  We stoppen de pwm
+//
+void stopPwm(void)
+{
+    HAL_TIM_Base_Stop_IT(&htim3);
+    HAL_TIM_PWM_Stop(&htim4,TIM_CHANNEL_3);
+}
+
+//
+//  We starten de pwm, dit doen we door de pwm output te starten en t3 voor de samples
+//
+void startPwm(void)
+{
+    HAL_TIM_Base_Start_IT(&htim3);
+    HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_3);
+}
