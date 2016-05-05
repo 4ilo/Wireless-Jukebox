@@ -37,6 +37,7 @@
 /* USER CODE BEGIN Includes */
 
 #include <string.h>
+#include <stdlib.h>
 #include "wav.h"
 #include "esp.h"
 
@@ -149,16 +150,20 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
 
-  // De variabele waar de file inzit
-   FIL MyFile;
+  uint8_t aantalNummers = 0;
 
+  // De variabele waar de file inzit
+  FIL MyFile;
 
   HAL_UART_Transmit(&huart2,"Wireless jukebox V1.0",21,10);
 
   // We halen alle titels op vanaf de sd-kaart en slagen deze op in een array
-  char * titels[10];
-  uint8_t aantal = getTitels(&MyFile,titels,10);
+  char * titels[20];
+  aantalNummers = getTitels(&MyFile,titels,20);
 
+  // We sturen de eerste liedjes naar de esp
+  uint8_t selectedSongs[4] = {0};
+  randomNummers(selectedSongs,aantalNummers);
 
   // We gaan nu de eerste wav buffer vullen, hiervoor pakken we steeds nummer 0
   probeer(f_open(&MyFile,"0.wav",FA_READ),"openen file 0.wav");
@@ -172,16 +177,9 @@ int main(void)
   // We zetten de eerste titels op de esp
   uint8_t teller;
   HAL_Delay(5000);
-
-  for(teller = 0; teller<2; teller++)
-  {
-    setSong(1,titels[0]);
-    setSong(2,titels[1]);
-    setSong(3,titels[2]);
-    setSong(4,titels[3]);
-    HAL_Delay(100);
-  }
   
+  sendSongsToEsp(titels,selectedSongs);
+
   uint8_t volgendLiedId = 0;
   char buffer[100];
   char openSongString[6];
@@ -204,21 +202,24 @@ int main(void)
       // We sluiten de file
       f_close(&MyFile);
 
-      volgendLiedId = getBest() - 1 ;    // Id van het volgend liedje ophalen
-      sprintf(buffer,"beste id: %d",volgendLiedId);
-      HAL_UART_Transmit(&huart2,buffer,strlen(buffer),10);
-      sprintf(openSongString,"%d.wav",volgendLiedId);
+      volgendLiedId = getBest() - 1;
+      volgendLiedId = selectedSongs[volgendLiedId];    // Id van het volgend liedje ophalen
+      sprintf(openSongString,"%d.wav",volgendLiedId);  // Zo staat het liedje op de schijf
 
       // We openen de nieuwe file
       probeer(f_open(&MyFile,openSongString,FA_READ),"open nieuw liedje");
-      //probeer(f_open(&MyFile,"2.wav",FA_READ),"open nieuw liedje");
-      HAL_UART_Transmit(&huart2,"nieuw liedje is geladen.",24,10);
+
+      // Liedjes voor de volgende stemming kiezen
+      randomNummers(selectedSongs,aantalNummers);
+      sendSongsToEsp(titels,selectedSongs);
+
+      // Alles terug in de beginpositie
       getData(&MyFile,wavBuffer0,512);
       wavBufferSelect = 0;
       bufferEnd = 0;
       songEnd = 0;
-
       startPwm();
+
     }
     
     if(bufferEnd == 1)
@@ -278,6 +279,8 @@ void SystemClock_Config(void)
   /* SysTick_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
 }
+
+
 
 /* I2C1 init function */
 void MX_I2C1_Init(void)
