@@ -1,6 +1,9 @@
 
 #include "wav.h"
 
+//
+//  Alle titles ophalen uit het titelbestand
+//
 uint16_t getTitels(FIL * file, char ** titels, uint16_t maxTitels)
 {
 

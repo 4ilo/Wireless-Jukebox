@@ -176,7 +176,7 @@ int main(void)
 
   // We zetten de eerste titels op de esp
   uint8_t teller;
-  HAL_Delay(5000);
+  HAL_Delay(5000);    // We moeten wachten zodat de esp zeker opgestart is
   
   sendSongsToEsp(titels,selectedSongs);
 

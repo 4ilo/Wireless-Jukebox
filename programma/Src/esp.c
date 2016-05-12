@@ -73,8 +73,11 @@ void sendSongsToEsp(char * titels[], uint8_t selectedSongs[])
   	for(teller = 0; teller<4; teller++)
   	{
     	setSong(1,titels[selectedSongs[0]]);
+    	HAL_Delay(100);
     	setSong(2,titels[selectedSongs[1]]);
+    	HAL_Delay(100);
     	setSong(3,titels[selectedSongs[2]]);
+    	HAL_Delay(100);
     	setSong(4,titels[selectedSongs[3]]);
     	HAL_Delay(100);
   	}
